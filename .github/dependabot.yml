@@ -1,0 +1,32 @@
+version: 2
+updates:
+  # Keep Poetry dependencies up to date
+  - package-ecosystem: "pip"
+    directory: "/"                    # where pyproject.toml lives
+    schedule:
+      interval: "daily"
+    versioning-strategy: "increase"   # allow minor/patch bumps
+    groups:
+      poetry-dependencies:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "chore(poetry)"
+    labels:
+      - "dependencies"
+      - "poetry"
+
+  # Keep GitHub Actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+      - "ci"

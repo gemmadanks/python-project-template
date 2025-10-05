@@ -5,6 +5,7 @@
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/commits-conventional-brightgreen.svg)](https://www.conventionalcommits.org/)
 [![Ruff](https://img.shields.io/badge/lint-ruff-informational)](https://docs.astral.sh/ruff/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=gemmadanks/python-project-template)](https://github.com/gemmadanks/python-project-template/network/updates)
 
 A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation, pre-commit hooks, GitHub Actions CI, and automated semantic releases.
 
