@@ -1,0 +1,130 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pre-commit:
+    name: Pre-commit hooks (lint/format/spell/type, all files)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.2.0
+
+      # Install dev deps so local hooks (e.g., pyright/pytest via poetry) can run
+      - name: Install dev dependencies
+        run: poetry install --no-interaction --with dev
+
+      # Run the same hooks as locally; include push stage so pre-push hooks run too
+      - name: Run pre-commit (all files, commit & push stages)
+        uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files --hook-stage push
+
+  test:
+    name: Tests ${{ matrix.os }} / py${{ matrix.python }}
+    needs: pre-commit
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-14, windows-latest]
+        python: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.2.0
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Install dev dependencies
+        run: poetry install --no-interaction --with dev
+
+      - name: Run tests (full suite)
+        run: poetry run pytest --cov --cov-report=term-missing
+
+  docs:
+    name: Build docs (mkdocs)
+    needs: [pre-commit, test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.2.0
+
+      - name: Install docs dependencies
+        run: poetry install --no-interaction --with docs
+
+      - name: Build HTML (fail on warnings)
+        run: poetry run mkdocs build --strict
+
+      - name: Upload built docs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-html
+          path: site
+
+  package:
+    name: Package smoke test
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.2.0
+
+      - name: Build and install wheel
+        run: |
+          poetry build
+          python -m venv pkgtest
+          source pkgtest/bin/activate
+          python -m pip install --upgrade pip
+          python -m pip install dist/*.whl
+          python -c "import package_name as m; print(getattr(m, '__version__', 'OK'))"
