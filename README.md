@@ -1,11 +1,12 @@
 # Python Project Template
-
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fgemmadanks%2Fpython-project-template%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)
 [![CI](https://github.com/gemmadanks/python-project-template/actions/workflows/ci.yaml/badge.svg?branch=main)](.github/workflows/ci.yaml)
 [![release-please](https://github.com/gemmadanks/python-project-template/actions/workflows/release-please.yaml/badge.svg)](.github/release-please-config.json)
-[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
-[![Conventional Commits](https://img.shields.io/badge/commits-conventional-brightgreen.svg)](https://www.conventionalcommits.org/)
-[![Ruff](https://img.shields.io/badge/lint-ruff-informational)](https://docs.astral.sh/ruff/)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=gemmadanks/python-project-template)](https://github.com/gemmadanks/python-project-template/network/updates)
+[![Dependabot](https://img.shields.io/github/issues-search?query=repo%3Agemmadanks%2Fpython-project-template%20is%3Apr%20author%3Aapp%2Fdependabot%20is%3Aopen&label=Dependabot%20PRs)](https://github.com/gemmadanks/python-project-template/issues?q=is%3Apr%20is%3Aopen%20author%3Aapp%2Fdependabot)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation, pre-commit hooks, GitHub Actions CI, and automated semantic releases.
 
