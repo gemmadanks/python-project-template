@@ -1,0 +1,14 @@
+site_name: Python Project Template Documentation
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Home: index.md
+  - Tutorials: tutorials.md
+  - How-to Guides: how-to-guides.md
+  - Reference: reference.md
+  - Explanation: explanation.md
