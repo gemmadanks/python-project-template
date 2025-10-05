@@ -1,0 +1,69 @@
+repos:
+  # --- Ruff: lint + format (fast) ---
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]         # remove if you want fail-only
+      - id: ruff-format
+
+  # --- Basic hygiene ---
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-toml
+      - id: pretty-format-json
+        args: ["--autofix"]
+        files: "\\.(json)$"
+
+  # --- Conventional commits ---
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.0.0  # check for latest version
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  # --- Spelling (code+docs) ---
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        args: ["--skip", "poetry.lock,dist,build,.venv,*.min.js"]
+        exclude: |
+          (?x)(
+            ^docs/_build/|
+            ^.*/vendor/.*
+          )
+
+  # --- Notebooks: strip outputs ---
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+        files: "\\.ipynb$"
+
+  # --- Type checking ---
+  - repo: local
+    hooks:
+      - id: pyright
+        name: pyright (type check)
+        entry: poetry run pyright
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+  # --- Tests: exclude slow tests and run on pre-push ---
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest (quick)
+        entry: poetry run pytest -q -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
+        language: system
+        types: [python]
+        pass_filenames: false
+        stages: [pre-push]
