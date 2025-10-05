@@ -57,6 +57,17 @@ repos:
         pass_filenames: false
         stages: [pre-push]
 
+  # --- Docs: verify MkDocs build ---
+  - repo: local
+    hooks:
+      - id: mkdocs-build
+        name: mkdocs build (check docs)
+        entry: poetry run mkdocs build --config-file mkdocs.yml --strict
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+        always_run: true
+
   # --- Tests: exclude slow tests and run on pre-push ---
   - repo: local
     hooks:
