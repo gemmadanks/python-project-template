@@ -58,5 +58,5 @@
   ],
   "include-component-in-tag": false,
   "package-name": "package_name",
-  "release-type": "python-poetry"
+  "release-type": "python"
 }

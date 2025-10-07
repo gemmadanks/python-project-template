@@ -28,3 +28,15 @@ def say_hello(name: str) -> str:
         str: A message to say hello.
     """
     return f"Hello, {name}!"
+
+
+def say_goodbye(name: str) -> str:
+    """Return a goodbye message.
+
+    Bids farewell to the user by name.
+
+    Example:
+        >>> say_goodbye("Alice")
+        'Goodbye, Alice!'
+    """
+    return f"Goodbye, {name}!"
