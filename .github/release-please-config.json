@@ -48,7 +48,14 @@
       "type": "test"
     }
   ],
-  "extra-files": [],
+  "extra-files": [
+    {
+      "path": "CITATION.cff",
+      "pattern": "^version: (.*)$",
+      "replacement": "version: ${version}",
+      "type": "plain-text"
+    }
+  ],
   "include-component-in-tag": false,
   "package-name": "package_name",
   "release-type": "python-poetry"

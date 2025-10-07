@@ -41,7 +41,7 @@ body:
       label: Version
       description: What version of the package are you using?
       options:
-        - 0.1.0 (Default)
+        - 0.1.0
       default: 0
     validations:
       required: true

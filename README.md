@@ -8,7 +8,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation, pre-commit hooks, GitHub Actions CI, GitHub issue templates and automated semantic releases.
+A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
@@ -133,6 +133,7 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 │   ├── ISSUE_TEMPLATE/             # Issue forms
 |   |   ├── 01-bug.yml
 │   │   └── 02-feature.yml
+|   ├── pull_request_template.md    # Pull request template
 │   └── dependabot.yml              # Dependency update automation
 ├── .pre-commit-config.yaml         # Pre-commit hook definitions
 ├── pyproject.toml                  # Project metadata + dependencies (Poetry)
