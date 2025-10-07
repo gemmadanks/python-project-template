@@ -1,0 +1,59 @@
+{
+  "bootstrap-sha": "5f23c343086ed6d8d138b07740444558bf1fc243",
+  "packages": {
+    ".": {
+      "bump-minor-pre-major": true,
+      "changelog-path": "CHANGELOG.md",
+      "changelog-types": [
+        {
+          "hidden": false,
+          "section": "Features",
+          "type": "feat"
+        },
+        {
+          "hidden": false,
+          "section": "Bug Fixes",
+          "type": "fix"
+        },
+        {
+          "hidden": false,
+          "section": "Performance",
+          "type": "perf"
+        },
+        {
+          "hidden": true,
+          "section": "Refactoring",
+          "type": "refactor"
+        },
+        {
+          "hidden": true,
+          "section": "Documentation",
+          "type": "docs"
+        },
+        {
+          "hidden": true,
+          "section": "CI",
+          "type": "ci"
+        },
+        {
+          "hidden": true,
+          "section": "Build",
+          "type": "build"
+        },
+        {
+          "hidden": true,
+          "section": "Chores",
+          "type": "chore"
+        },
+        {
+          "hidden": true,
+          "section": "Tests",
+          "type": "test"
+        }
+      ],
+      "include-component-in-tag": false,
+      "package-name": "package_name",
+      "release-type": "python"
+    }
+  }
+}
