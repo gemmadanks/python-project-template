@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/gemmadanks/python-project-template/compare/v0.2.0...v0.3.0) (2025-10-09)
+
+
+### Features
+
+* add badge for codecov ([c0c5325](https://github.com/gemmadanks/python-project-template/commit/c0c5325390f2805f0f4a003a390e41e6cd831288))
+* upload codecov ([#5](https://github.com/gemmadanks/python-project-template/issues/5)) ([c0c5325](https://github.com/gemmadanks/python-project-template/commit/c0c5325390f2805f0f4a003a390e41e6cd831288))
+
 ## [0.2.0](https://github.com/gemmadanks/python-project-template/compare/v0.1.0...v0.2.0) (2025-10-09)
 
 
