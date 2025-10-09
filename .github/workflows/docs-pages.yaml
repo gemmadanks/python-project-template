@@ -1,0 +1,42 @@
+name: Docs (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+      - ".github/workflows/docs-pages.yml"
+      - "package_name/**"  # rebuild if API docs change
+  workflow_dispatch:
+
+permissions:
+  contents: write  # needed to push to gh-pages
+
+concurrency:
+  group: docs-pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.2.0
+
+      - name: Install docs deps
+        run: poetry install --no-interaction --with docs
+
+      - name: Build & deploy with MkDocs
+        # --force overwrites existing site; --clean removes stale files
+        run: poetry run mkdocs gh-deploy --force --clean
