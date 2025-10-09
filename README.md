@@ -1,9 +1,9 @@
 # Python Project Template
 ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fgemmadanks%2Fpython-project-template%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)
 [![CI](https://github.com/gemmadanks/python-project-template/actions/workflows/ci.yaml/badge.svg?branch=main)](.github/workflows/ci.yaml)
+[![release-please](https://github.com/gemmadanks/python-project-template/actions/workflows/release-please.yaml/badge.svg)](release-please-config.json)
 [![Docs (GitHub Pages)](https://github.com/gemmadanks/python-project-template/actions/workflows/docs-pages.yaml/badge.svg)](https://github.com/gemmadanks/python-project-template/actions/workflows/docs-pages.yaml)
-[![Docs (RTD)](https://app.readthedocs.org/projects/python-project-template/badge/?version=latest)]
-[![release-please](https://github.com/gemmadanks/python-project-template/actions/workflows/release-please.yaml/badge.svg)](.github/release-please-config.json)
+[![Docs (RTD)](https://app.readthedocs.org/projects/python-project-template/badge/?version=latest)](https://gemmadanks-python-project-template.readthedocs.io/en/latest/)
 [![Dependabot](https://img.shields.io/github/issues-search?query=repo%3Agemmadanks%2Fpython-project-template%20is%3Apr%20author%3Aapp%2Fdependabot%20is%3Aopen&label=Dependabot%20PRs)](https://github.com/gemmadanks/python-project-template/issues?q=is%3Apr%20is%3Aopen%20author%3Aapp%2Fdependabot)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
