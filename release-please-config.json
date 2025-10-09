@@ -52,12 +52,7 @@
         }
       ],
       "extra-files": [
-        {
-          "path": "CITATION.cff",
-          "pattern": "^version: (.*)$",
-          "replacement": "version: ${version}",
-          "type": "plain-text"
-        }
+        "CITATION.cff"
       ],
       "include-component-in-tag": false,
       "package-name": "package_name",
