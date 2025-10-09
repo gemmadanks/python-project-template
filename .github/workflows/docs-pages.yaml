@@ -6,9 +6,8 @@ on:
     paths:
       - "docs/**"
       - "mkdocs.yml"
-      - ".github/workflows/docs-pages.yml"
+      - ".github/workflows/docs-pages.yaml"
       - "package_name/**"  # rebuild if API docs change
-  workflow_dispatch:
 
 permissions:
   contents: write  # needed to push to gh-pages
