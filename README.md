@@ -8,7 +8,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
+A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
@@ -37,12 +37,15 @@ The goal is to help you start writing code immediately without having to spend t
 - Packaging and dependency management via [Poetry](https://python-poetry.org/): [pyproject.toml](pyproject.toml)
 - Linting and formatting via [Ruff](https://docs.astral.sh/ruff/): [.pre-commit-config.yaml](.pre-commit-config.yaml)
 - Testing framework using [pytest](https://docs.pytest.org/en/stable/)
-- CI for using [GitHub Actions](https://docs.github.com/en/actions): [.github/workflows/ci.yaml](.github/workflows/ci.yaml)
+- CI using [GitHub Actions](https://docs.github.com/en/actions): [.github/workflows/ci.yaml](.github/workflows/ci.yaml)
     - [Pre-commit hooks](.pre-commit-config.yaml) (linting and formatting)
     - Automated tests
     - Package build with smoke test
 - Templates for GitHub issues: bug report ([01-bug.yml](.github/ISSUE_TEMPLATE/01-bug.yml)) and feature request ([02-feature.yml](.github/ISSUE_TEMPLATE/01-feature.yml))
+- Template for GitHub pull request: [.github/pull_request_template.md](.github/pull_request_template.md)
 - Docs ([MkDocs](https://www.mkdocs.org/) + [mkdocstrings](https://mkdocstrings.github.io/)): [mkdocs.yml](mkdocs.yml)
+    - Automated deployment to `gh-pages` branch via GitHub action: [.github/workflows/docs-pages.yaml](.github/workflows/docs-pages.yaml)
+    - Configuration for Read The Docs integration: [.readthedocs.yaml](.readthedocs.yaml)
 - Release automation via GitHub action from [release-please](https://github.com/googleapis/release-please): [.github/release-please-config.json](.github/release-please-config.json)
 - Citation metadata: [CITATION.cff](CITATION.cff)
 - BSD-3-Clause: [LICENSE](LICENSE)
