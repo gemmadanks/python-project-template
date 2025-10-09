@@ -3,7 +3,7 @@
 ## [0.2.0](https://github.com/gemmadanks/python-project-template/compare/v0.1.0...v0.2.0) (2025-10-09)
 
 
-### Features
+### 🚀 Features
 
 * add badges for docs ([04c52be](https://github.com/gemmadanks/python-project-template/commit/04c52be2df4497373c7b1eab383491478268802a))
 * add poetry checks to pre-commit hooks ([cf470e3](https://github.com/gemmadanks/python-project-template/commit/cf470e3deb75c6364f5faa24bbdc4a72a9697d0e))
@@ -11,19 +11,19 @@
 * add workflow for deploying docs to GitHub pages ([a924362](https://github.com/gemmadanks/python-project-template/commit/a92436265ed915dee7a4073ce7430c0e104d0263))
 
 
-### Bug Fixes
+### 🐛 Bug Fixes
 
 * fix extra-files for release-please ([421feae](https://github.com/gemmadanks/python-project-template/commit/421feae5cbb59220d58a0f150472448ed25b6278))
 
 
-### Documentation
+### 📚 Documentation
 
 * update README ([d534acb](https://github.com/gemmadanks/python-project-template/commit/d534acb8841f968d5843ab01390999fbd40d5127))
 
 ## 0.1.0 (2025-10-07)
 
 
-### Features
+### 🚀 Features
 
 * add badges
 * add CITATION.cff
@@ -36,7 +36,7 @@
 * add release-please configuration
 * add GitHub issues templates
 
-### Documentation
+### 📚 Documentation
 
 * add CHANGELOG ([a1c0a1e](https://github.com/gemmadanks/python-project-template/commit/a1c0a1ee3a20f7cdaa4f51a99515a8a6435acc15))
 * add documentation framework ([74c4bbb](https://github.com/gemmadanks/python-project-template/commit/74c4bbb62b21c1bb0bdaf8da95086f36f0f1bc84))
