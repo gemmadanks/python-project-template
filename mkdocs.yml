@@ -12,3 +12,6 @@ nav:
   - How-to Guides: how-to.md
   - Reference: reference.md
   - Explanation: explanation.md
+
+extra_javascript:
+    - javascript/readthedocs.js
