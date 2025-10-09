@@ -78,3 +78,24 @@ repos:
         types: [python]
         pass_filenames: false
         stages: [pre-push]
+
+
+# --- Poetry: manage dependencies and virtualenv ---
+  - repo: https://github.com/python-poetry/poetry
+    rev: 2.2.1
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+      - id: poetry-install
+  - repo: https://github.com/python-poetry/poetry-plugin-export
+    rev: 1.9.0
+    hooks:
+      - id: poetry-export
+        args:
+          - "-f"            # format
+          - "requirements.txt"
+          - "-o"
+          - "docs/requirements.txt"
+          - "--with"
+          - "docs"
+          - "--without-hashes"
