@@ -1,5 +1,6 @@
 # Python Project Template
 ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fgemmadanks%2Fpython-project-template%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)
+[![codecov](https://codecov.io/gh/gemmadanks/python-project-template/graph/badge.svg?token=SJVFI32RHC)](https://codecov.io/gh/gemmadanks/python-project-template)
 [![CI](https://github.com/gemmadanks/python-project-template/actions/workflows/ci.yaml/badge.svg?branch=main)](.github/workflows/ci.yaml)
 [![release-please](https://github.com/gemmadanks/python-project-template/actions/workflows/release-please.yaml/badge.svg)](release-please-config.json)
 [![Docs (GitHub Pages)](https://github.com/gemmadanks/python-project-template/actions/workflows/docs-pages.yaml/badge.svg)](https://github.com/gemmadanks/python-project-template/actions/workflows/docs-pages.yaml)
@@ -10,7 +11,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
+A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
