@@ -30,6 +30,12 @@ docs = [
     "mkdocs-material"
 ]
 
+[tool.coverage.run]
+source = ["package_name"]
+omit = [
+    "tests/*",
+    "conftest.py"
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
