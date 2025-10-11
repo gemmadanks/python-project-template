@@ -11,7 +11,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
+A minimal, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
@@ -70,14 +70,17 @@ print(say_hello("World"))
 
 ## 🧪 Common Tasks
 
+Several common tasks have been added as recipes to a [justfile](justfile) in the root of the repository.
+[Installing just](https://just.systems/man/en/packages.html) allows you to run the following:
+
 ```bash
-poetry run pytest                  # full test suite
-poetry run pytest -m "not slow"    # quick (mirrors pre-push)
-poetry run ruff format             # format
-poetry run ruff check              # lint
-poetry run mkdocs serve            # live docs
-poetry run mkdocs build --strict   # build docs (CI parity)
-poetry run python -m doctest package_name/greet.py
+just install               # poetry install
+just test                  # full test suite
+just lint                  # ruff check
+just format                # ruff format
+just docs-serve            # live docs
+just pre-commit            # run all pre-commit hooks
+just clean                 # remove generated files and folders
 ```
 
 ## 🪝 Pre-commit / Pre-push
@@ -85,15 +88,13 @@ poetry run python -m doctest package_name/greet.py
 Install hooks once:
 
 ```bash
-poetry run pre-commit install           # installs default (commit-stage) hooks
-poetry run pre-commit install --hook-type pre-push
-pre-commit install --hook-type commit-msg  # for conventional commits
+just pre-commit-install           # installs default (commit-stage) hooks
 ```
 
 Run on all files (CI equivalent):
 
 ```bash
-poetry run pre-commit run --all-files --hook-stage push
+just pre-commit
 ```
 
 Hook definitions: [.pre-commit-config.yaml](.pre-commit-config.yaml)
@@ -152,6 +153,7 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 ├── .release-please-manifest.json   # Release-please state
 ├── release-please-config.json      # Release-please configuration
 ├── .python-version                 # pyenv version pin
+├── justfile                        # justfile containing recipes for common tasks
 └── .gitignore
 ```
 
