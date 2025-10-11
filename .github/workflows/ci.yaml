@@ -29,7 +29,7 @@ jobs:
 
       # Install dev deps so local hooks (e.g., pyright/pytest via poetry) can run
       - name: Install dev dependencies
-        run: poetry install --no-interaction --with dev
+        run: poetry install --no-interaction --with dev,docs
 
       # Run the same hooks as locally; include push stage so pre-push hooks run too
       - name: Run pre-commit (all files, commit & push stages)
