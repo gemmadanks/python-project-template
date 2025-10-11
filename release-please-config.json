@@ -4,55 +4,55 @@
     ".": {
       "bump-minor-pre-major": true,
       "changelog-path": "CHANGELOG.md",
-      "changelog-types": [
+      "changelog-sections": [
         {
           "hidden": false,
-          "section": "\ud83d\ude80 Features",
+          "section": "🚀 Features",
           "type": "feat"
         },
         {
           "hidden": false,
-          "section": "\ud83d\udc1b Bug Fixes",
+          "section": "🐛 Bug Fixes",
           "type": "fix"
         },
         {
           "hidden": false,
-          "section": "\ud83d\udce6 Dependencies",
+          "section": "📦 Dependencies",
           "type": "deps"
         },
         {
           "hidden": false,
-          "section": "\u26a1 Performance",
+          "section": "⚡ Performance",
           "type": "perf"
         },
         {
           "hidden": true,
-          "section": "\ud83e\uddf9 Refactoring",
+          "section": "🧹 Refactoring",
           "type": "refactor"
         },
         {
           "hidden": true,
-          "section": "\ud83d\udcda Documentation",
+          "section": "📚 Documentation",
           "type": "docs"
         },
         {
           "hidden": true,
-          "section": "\ud83e\udde9 CI",
+          "section": "🧩 CI",
           "type": "ci"
         },
         {
           "hidden": true,
-          "section": "\ud83d\udd27 Build",
+          "section": "🔧 Build",
           "type": "build"
         },
         {
           "hidden": true,
-          "section": "\ud83e\uddfa Chores",
+          "section": "🧴 Chores",
           "type": "chore"
         },
         {
           "hidden": true,
-          "section": "\ud83e\uddea Tests",
+          "section": "🧪 Tests",
           "type": "test"
         }
       ],
