@@ -25,12 +25,12 @@ dev = [
     "pytest-cov (>=7.0.0,<8.0.0)"
 ]
 
-[tool.poetry.group.docs]
-dependencies = [
+docs = [
     "mkdocs",
     "mkdocstrings[python]",
     "mkdocs-material"
 ]
+
 
 [tool.coverage.run]
 source = ["package_name"]

@@ -34,7 +34,7 @@ jobs:
           version: 2.2.0
 
       - name: Install docs deps
-        run: poetry install --no-interaction --extras docs
+        run: poetry install --no-interaction --with docs
 
       - name: Build & deploy with MkDocs
         # --force overwrites existing site; --clean removes stale files

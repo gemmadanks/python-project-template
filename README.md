@@ -58,7 +58,7 @@ The goal is to help you start writing code immediately without having to spend t
 ```bash
 git clone https://github.com/gemmadanks/python-project-template
 cd python-project-template
-poetry install --with dev --all-extras
+poetry install --with dev,docs
 ```
 
 ## 🏁 Quickstart
