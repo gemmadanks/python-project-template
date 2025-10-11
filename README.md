@@ -70,6 +70,9 @@ print(say_hello("World"))
 
 ## 🧪 Common Tasks
 
+Several common tasks have been added as recipes to a [justfile](justfile) in the root of the repository.
+[Installing just](https://just.systems/man/en/packages.html) allows you to run the following:
+
 ```bash
 just install               # poetry install
 just test                  # full test suite
@@ -77,6 +80,7 @@ just lint                  # ruff check
 just format                # ruff format
 just docs-serve            # live docs
 just pre-commit            # run all pre-commit hooks
+just clean                 # remove generated files and folders
 ```
 
 ## 🪝 Pre-commit / Pre-push
