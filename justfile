@@ -42,7 +42,7 @@ test:
 
 # Run tests with verbose output (exclude slow)
 test-vv:
-    poetry run pytest -vv -q -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
+    poetry run pytest -vv -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
 
 # Run full test suite with coverage
 coverage:
