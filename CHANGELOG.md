@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/gemmadanks/python-project-template/compare/v0.3.0...v0.4.0) (2025-10-11)
+
+
+### 🚀 Features
+
+* add justfile ([#11](https://github.com/gemmadanks/python-project-template/issues/11)) ([8b2396a](https://github.com/gemmadanks/python-project-template/commit/8b2396a39c7121970eb796bbb3523134dd9af929))
+
+
+### 🐛 Bug Fixes
+
+* remove docs requirements file ([#10](https://github.com/gemmadanks/python-project-template/issues/10)) ([38314b9](https://github.com/gemmadanks/python-project-template/commit/38314b9aa1f60356c5a5939de4983e17499d79a8))
+* use emoticons in changelog ([#8](https://github.com/gemmadanks/python-project-template/issues/8)) ([fa3f6af](https://github.com/gemmadanks/python-project-template/commit/fa3f6af87fa45b33526fab2f8e83139c3c780627))
+
 ## [0.3.0](https://github.com/gemmadanks/python-project-template/compare/v0.2.0...v0.3.0) (2025-10-09)
 
 
