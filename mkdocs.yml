@@ -12,6 +12,10 @@ nav:
   - How-to Guides: how-to.md
   - Reference: reference.md
   - Explanation: explanation.md
+  - Architecture:
+      - ADR Index: architecture/adr/index.md
+      - ADR-001: architecture/adr/001-use-architectural-decision-records.md
+      - Template: architecture/adr/template.md
 
 extra_javascript:
     - javascript/readthedocs.js
