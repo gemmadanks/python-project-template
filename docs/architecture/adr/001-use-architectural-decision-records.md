@@ -51,7 +51,7 @@ A **Context** section will describe the forces at play in value-neutral language
 
 A **Problem Statement** will summarise the challenge faced and, where possible, articulate it as a clear question to be answered.
 
-An **Options Considered** section will include a decision matrix scoring each of the options considered against the key drivers behind the decision. To avoid false precision, a simple scoring system will be used to rate an option as either good (✅), ok (⚠️) or poor (❌). Emoticons will be used to provide human readers with a quick visual overview. These are also readable by current AI tools, such as ChatGPT, and keeping a ledgend with numerical scoring improves AI-readability. Optional weights will represent the relative importance of drivers and an overall score used to rank the options. A short description will supplement and summarise this decision matrix.
+An **Options Considered** section will include a decision matrix scoring each of the options considered against the key drivers behind the decision. To avoid false precision, a simple scoring system will be used to rate an option as either good (✅), ok (⚠️) or poor (❌). Emoticons will be used to provide human readers with a quick visual overview. These are also readable by current AI tools, such as ChatGPT, and keeping a legend with numerical scoring improves AI-readability. Optional weights will represent the relative importance of drivers and an overall score used to rank the options. A short description will supplement and summarise this decision matrix.
 
 The **Decision Outcome** section states the final decision and the justification based on the results of the decision matrix evaluation. It is stated in full sentences, with active voice.
 
