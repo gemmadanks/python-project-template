@@ -59,7 +59,7 @@ A **Consequences** section describes the resulting context, after applying the d
 
 The whole document should be one or two pages long. We will write each ADR as if it is a conversation with a future developer and in a way that maximises its usefulness for AI assistants.
 
-We will keep ADRs in the project repository under `docs/architecture/adr/`. The filename will match the ADR title without the `ADR` prefix, all lowercase and `-` replacing spaces, e.g. `001-use-architectural-decision-records.md.` A template in this directory (`template.md`) will used for all new ADRs for consistency.
+We will keep ADRs in the project repository under `docs/architecture/adr/`. The filename will match the ADR title without the `ADR` prefix, all lowercase and `-` replacing spaces, e.g. `001-use-architectural-decision-records.md`. A template in this directory (`template.md`) will used for all new ADRs for consistency.
 
 If we change a decision at a later date, we will keep the old ADR but mark it as superseded. This way it is available for additional context.
 
