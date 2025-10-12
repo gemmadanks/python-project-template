@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/gemmadanks/python-project-template/compare/v0.4.0...v0.5.0) (2025-10-12)
+
+
+### 🚀 Features
+
+* add architectural decision records ([#12](https://github.com/gemmadanks/python-project-template/issues/12)) ([4d1a08e](https://github.com/gemmadanks/python-project-template/commit/4d1a08e8ffd4336e09200b9f690c8e28347f9b45))
+
 ## [0.4.0](https://github.com/gemmadanks/python-project-template/compare/v0.3.0...v0.4.0) (2025-10-11)
 
 
