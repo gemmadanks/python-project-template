@@ -80,4 +80,3 @@ Developers will be prompted to confirm that they have checked for relevant ADRs 
 | **ADRs**   | |
 | **Issues** | |
 | **PRs**    | |
-| | |
