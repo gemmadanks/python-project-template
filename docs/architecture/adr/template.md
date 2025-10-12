@@ -69,4 +69,3 @@ How will you ensure this ADR is implemented and enforced?
 | **ADRs**   | |
 | **Issues** | |
 | **PRs**    | |
-| | |
