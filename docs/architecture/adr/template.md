@@ -29,10 +29,10 @@ Add each driver as a column name.
 5.	**Score each option** for how well it satisfies each driver using the legend: ✅ = 3 (Good) ⚠️ = 2 (Acceptable) ❌ = 1 (Poor)
 6.	**Compute overall score**:
 ```
-overall score = (Driver₁ weight × Driver₁ score)
-              + (Driver₂ weight × Driver₂ score)
+overall score = (Driver1 weight × Driver1 score)
+              + (Driver2 weight × Driver2 score)
               + ...
-              + (Driverₙ weight × Driverₙ score)
+              + (DriverN weight × DriverN score)
 ```
 7. **(Optional) Add short notes** on the main pros and cons for each option.
 8. **(Optional) Sort the rows** according to the overall score (best fit at the top)
