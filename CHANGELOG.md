@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/gemmadanks/python-project-template/compare/v0.5.0...v0.5.1) (2025-10-15)
+
+
+### 🐛 Bug Fixes
+
+* add check for ADR to PR template ([#14](https://github.com/gemmadanks/python-project-template/issues/14)) ([c15d43d](https://github.com/gemmadanks/python-project-template/commit/c15d43d73dd97017aa569dcbc7be9b60160ff0f6))
+
 ## [0.5.0](https://github.com/gemmadanks/python-project-template/compare/v0.4.0...v0.5.0) (2025-10-12)
 
 
