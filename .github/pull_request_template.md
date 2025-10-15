@@ -8,7 +8,6 @@ Please check each of the following before merging:
 - [ ] This pull request is ready to merge (leave unchecked to indicate a WIP)
 - [ ] I have created an ADR (Architecture Decision Record) for any architecturally significant changes
 - [ ] I have updated any relevant documentation
-- [ ] I have created an ADR for any architecturally significant changes
 - [ ] I will squash my commits and, where needed, edit the commit messages to make them more informative and follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) format
 - [ ] I have linked to any relevant issues
 
