@@ -6,7 +6,7 @@
 ### Prerequisites checklist
 Please check each of the following before merging:
 - [ ] This pull request is ready to merge (leave unchecked to indicate a WIP)
-- [ ] I will squash my commits and, where needed, edit the commit messages to make them more informative follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) format
+- [ ] I have created an ADR (Architecture Decision Record) for any architecturally significant changes
 - [ ] I have updated any relevant documentation
 - [ ] I have created an ADR for any architecturally significant changes
 - [ ] I have added unit tests for any new code
