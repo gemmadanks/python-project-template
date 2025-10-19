@@ -54,7 +54,7 @@ The goal is to help you start writing code immediately without having to spend t
 - Release automation via GitHub action from [release-please](https://github.com/googleapis/release-please): [.github/release-please-config.json](.github/release-please-config.json)
 - Citation metadata: [CITATION.cff](CITATION.cff)
 - BSD-3-Clause: [LICENSE](LICENSE)
-- [.editorconfig](https://editorconfig.org/) for consistent coding style across editors: [.editorconfig](.editorconfig)
+- [EditorConfig](https://editorconfig.org/) configuration for consistent coding style across editors: [.editorconfig](.editorconfig)
 
 ## 📦 Installation
 
