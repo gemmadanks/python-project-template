@@ -23,13 +23,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version-file: ".python-version"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
           version: ${{ env.UV_VERSION }}
+          enable-cache: true
 
       - name: Install dependencies
         run: uv sync --all-groups
@@ -57,16 +57,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: ${{ matrix.python }}
-          cache: pip
-
-      - name: Install uv
+      - name: Install uv and set python version
         uses: astral-sh/setup-uv@v6
         with:
           version: ${{ env.UV_VERSION }}
+          python-version: ${{ matrix.python }}
+          enable-cache: true
 
       - name: Install dependencies
         run: uv sync --all-groups
@@ -88,13 +84,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version-file: ".python-version"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
           version: ${{ env.UV_VERSION }}
+          enable-cache: true
 
       - name: Install dependencies
         run: uv sync --group docs
@@ -119,13 +115,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version-file: ".python-version"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
           version: ${{ env.UV_VERSION }}
+          enable-cache: true
 
       - name: Install dependencies
         run: uv sync --all-groups
