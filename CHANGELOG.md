@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.0](https://github.com/gemmadanks/python-project-template/compare/v0.5.1...v0.6.0) (2025-10-19)
+
+
+### 🚀 Features
+
+* add ADR to use uv for managing dependencies ([00511d0](https://github.com/gemmadanks/python-project-template/commit/00511d0d8c5088c39482c2ecfba877338688fc41))
+* migrate from Poetry to uv ([00511d0](https://github.com/gemmadanks/python-project-template/commit/00511d0d8c5088c39482c2ecfba877338688fc41))
+* use uv to manage dependencies ([#16](https://github.com/gemmadanks/python-project-template/issues/16)) ([00511d0](https://github.com/gemmadanks/python-project-template/commit/00511d0d8c5088c39482c2ecfba877338688fc41))
+
 ## [0.5.1](https://github.com/gemmadanks/python-project-template/compare/v0.5.0...v0.5.1) (2025-10-15)
 
 
