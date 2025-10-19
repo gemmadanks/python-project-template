@@ -58,9 +58,9 @@
       ],
       "extra-files": [
         {
+          "jsonpath": "$.version",
           "path": "CITATION.cff",
-          "regex": "^version:\\s*(?<version>.*)$",
-          "type": "generic"
+          "type": "yaml"
         }
       ],
       "include-component-in-tag": false,
