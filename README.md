@@ -62,7 +62,7 @@ The goal is to help you start writing code immediately without having to spend t
 ```bash
 git clone https://github.com/gemmadanks/python-project-template
 cd python-project-template
-uv sync
+uv sync --all-groups
 ```
 3. Install pre-commit hooks (only needs to be done once)
 ```bash
