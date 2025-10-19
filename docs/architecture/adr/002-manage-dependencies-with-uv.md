@@ -22,7 +22,7 @@ What dependency manager is best for our project?
 |  Option  | Description | Developer Experience | Speed | Reproducibility | Adoption | CI | PEP 621 | Overall score | Notes |
 |----------|-------------|-------------|-----------------|-------------| ----- | ------|------| ------|------|
 | **Weight**      | - | 2 | 2 | 2 | 1| 1 | 1 | - | - |
-| **uv**          | New, fast replacement for multiple tools, built in rust by creators of ruff.  | ✅ | ✅ | ✅  | ⚠️ | ✅ |  ✅ | 26 | Very fast. Probably the future standard. Also manages python versions. |
+| **uv**          | New, fast replacement for multiple tools, built in Rust by creators of ruff.  | ✅ | ✅ | ✅  | ⚠️ | ✅ |  ✅ | 26 | Very fast. Probably the future standard. Also manages python versions. |
 | **Poetry**      | Well established packaging manager with wide adoption. | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ | 25 | Mature, widely used but slower. |
 | **PDM**         | Light-weight, standards-compliant, written in Python. | ✅ | ⚠️  | ✅ | ⚠️ | ✅  |  ✅ | 24 | Good option, not as fast or popular as uv. |
 | **mamba**       | Reimplementation of conda in C++. | ⚠️ | ✅ | ✅ |  ✅ | ✅ | ❌ | 23 | Fast but not PEP 621 compliant |
