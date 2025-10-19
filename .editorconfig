@@ -2,18 +2,17 @@
 # top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
+# All files
 [*]
+# Unix-style newlines with a newline ending every file
 end_of_line = lf
 insert_final_newline = true
 # Whitespace settings
 trim_trailing_whitespace = true
-
-# Matches multiple files with brace expansion notation
 # Set default charset
-[*.{js,py}]
 charset = utf-8
 
+# Python files
 # 4 space indentation
 [*.py]
 indent_style = space
