@@ -11,7 +11,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A comprehensive, opinionated template for modern Python projects -- featuring uv packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates, architectural decision record (ADR) templates and automated semantic releases.
+A comprehensive, opinionated template for modern Python projects -- featuring uv packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, .editorconfig, GitHub Actions CI, GitHub issue and pull request templates, architectural decision record (ADR) templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
@@ -54,6 +54,7 @@ The goal is to help you start writing code immediately without having to spend t
 - Release automation via GitHub action from [release-please](https://github.com/googleapis/release-please): [.github/release-please-config.json](.github/release-please-config.json)
 - Citation metadata: [CITATION.cff](CITATION.cff)
 - BSD-3-Clause: [LICENSE](LICENSE)
+- [EditorConfig](https://editorconfig.org/) configuration for consistent coding style across editors: [.editorconfig](.editorconfig)
 
 ## 📦 Installation
 
@@ -158,6 +159,7 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 ├── release-please-config.json      # Release-please configuration
 ├── .python-version                 # pyenv version pin
 ├── justfile                        # justfile containing recipes for common tasks
+├── .editorconfig                   # Ensures consistent code style across editors
 └── .gitignore
 ```
 
