@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.1](https://github.com/gemmadanks/python-project-template/compare/v0.6.0...v0.6.1) (2025-10-19)
+
+
+### 🐛 Bug Fixes
+
+* add .editorconfig ([#19](https://github.com/gemmadanks/python-project-template/issues/19)) ([0af30ef](https://github.com/gemmadanks/python-project-template/commit/0af30efd61e70bdb71f4f7936b7309d84cb64cc2))
+* automate bumping version numbers in citation.cff and uv.lock ([#20](https://github.com/gemmadanks/python-project-template/issues/20)) ([6096054](https://github.com/gemmadanks/python-project-template/commit/6096054b65fb13cc879375664f038fa205bcadbb))
+
 ## [0.6.0](https://github.com/gemmadanks/python-project-template/compare/v0.5.1...v0.6.0) (2025-10-19)
 
 
