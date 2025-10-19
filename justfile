@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # 🧰 Python Project Template — Justfile
 # -----------------------------------------------------------------------------
-# Common developer commands for Poetry-based projects.
+# Common developer commands for uv-based projects.
 # Run `just <command>` (e.g., `just test`).
 # -----------------------------------------------------------------------------
 
@@ -14,57 +14,57 @@ default:
 
 # Install dependencies (create/update virtualenv)
 install:
-    poetry install
+    uv sync
 
 # Update dependencies to latest allowed versions
 update:
-    poetry update
+    uv lock --upgrade
 
 # Regenerate lock file
 lock:
-    poetry lock
+    uv lock
 
 # Lint (Ruff check)
 lint:
-    poetry run ruff check .
+    uv run ruff check .
 
 # Format (Ruff format)
 format:
-    poetry run ruff format .
+    uv run ruff format .
 
 # Type checking (Pyright)
 type-check:
-    poetry run pyright
+    uv run pyright
 
 # Run quick tests (exclude slow)
 test:
-    poetry run pytest -q -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
+    uv run pytest -q -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
 
 # Run tests with verbose output (exclude slow)
 test-vv:
-    poetry run pytest -vv -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
+    uv run pytest -vv -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
 
 # Run full test suite with coverage
 coverage:
-    poetry run pytest --cov --cov-report=term-missing
+    uv run pytest --cov --cov-report=term-missing
 
 # Build docs (MkDocs strict)
 docs-build:
-    poetry run mkdocs build --strict
+    uv run --group docs mkdocs build --strict
 
 # Serve docs locally
 docs-serve:
-    poetry run mkdocs serve -a localhost:8000
+    uv run --group docs mkdocs serve -a localhost:8000
 
 # Install pre-commit hooks
 pre-commit-install:
-    poetry run pre-commit install \
-    && poetry run pre-commit install -t pre-push \
-    && poetry run pre-commit install --hook-type commit-msg
+    uv run pre-commit install \
+    && uv run pre-commit install -t pre-push \
+    && uv run pre-commit install --hook-type commit-msg
 
 # Run all pre-commit hooks
 pre-commit:
-    poetry run pre-commit run --all-files --hook-stage push
+    uv run pre-commit run --all-files --hook-stage push
 
 # Clean generated artifacts
 clean:
@@ -72,4 +72,4 @@ clean:
 
 # Build distribution (wheel + sdist)
 build:
-    poetry build
+    uv build

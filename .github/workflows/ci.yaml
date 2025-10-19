@@ -8,6 +8,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # Set uv version
+  UV_VERSION: "0.9.4"
+
 jobs:
   pre-commit:
     name: Pre-commit hooks (lint/format/spell/type, all files)
@@ -19,17 +23,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version-file: ".python-version"
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          version: 2.2.0
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
 
-      # Install dev deps so local hooks (e.g., pyright/pytest via poetry) can run
-      - name: Install dev dependencies
-        run: poetry install --no-interaction --with dev,docs
+      - name: Install dependencies
+        run: uv sync --all-groups
 
       # Run the same hooks as locally; include push stage so pre-push hooks run too
       - name: Run pre-commit (all files, commit & push stages)
@@ -54,24 +57,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - name: Install uv and set python version
+        uses: astral-sh/setup-uv@v6
         with:
+          version: ${{ env.UV_VERSION }}
           python-version: ${{ matrix.python }}
-          cache: pip
+          enable-cache: true
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: 2.2.0
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-
-      - name: Install dev dependencies
-        run: poetry install --no-interaction --with dev
+      - name: Install dependencies
+        run: uv sync --all-groups
 
       - name: Run tests (full suite)
-        run: poetry run pytest --cov --cov-branch --cov-report=xml
+        run: uv run pytest --cov --cov-branch --cov-report=xml
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
@@ -87,19 +84,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version-file: ".python-version"
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          version: 2.2.0
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
 
-      - name: Install docs dependencies
-        run: poetry install --no-interaction --with docs
+      - name: Install dependencies
+        run: uv sync --group docs
 
       - name: Build HTML (fail on warnings)
-        run: poetry run mkdocs build --strict
+        run: uv run mkdocs build --strict
 
       - name: Upload built docs artifact
         uses: actions/upload-artifact@v4
@@ -118,17 +115,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          python-version-file: ".python-version"
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          version: 2.2.0
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --all-groups
 
       - name: Build and install wheel
         run: |
-          poetry build
+          uv build
           python -m venv pkgtest
           source pkgtest/bin/activate
           python -m pip install --upgrade pip
