@@ -84,7 +84,7 @@ Several common tasks have been added as recipes to a [justfile](justfile) in the
 
 ```bash
 just install               # uv sync
-just test                  # full test suite
+just test                  # run quick (non-slow) tests
 just lint                  # ruff check
 just format                # ruff format
 just type-check            # pyright type-check
