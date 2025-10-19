@@ -31,6 +31,9 @@ jobs:
         with:
           version: $UV_VERSION
 
+      - name: Install dependencies
+        run: uv sync --all-groups
+
       # Run the same hooks as locally; include push stage so pre-push hooks run too
       - name: Run pre-commit (all files, commit & push stages)
         uses: pre-commit/action@v3.0.1
@@ -65,6 +68,9 @@ jobs:
         with:
           version: $UV_VERSION
 
+      - name: Install dependencies
+        run: uv sync --all-groups
+
       - name: Run tests (full suite)
         run: uv run pytest --cov --cov-branch --cov-report=xml
 
@@ -90,8 +96,11 @@ jobs:
         with:
           version: $UV_VERSION
 
+      - name: Install dependencies
+        run: uv sync --group docs
+
       - name: Build HTML (fail on warnings)
-        run: uv run --group docs mkdocs build --strict
+        run: uv run mkdocs build --strict
 
       - name: Upload built docs artifact
         uses: actions/upload-artifact@v4
@@ -117,6 +126,9 @@ jobs:
         uses: astral-sh/setup-uv@v6
         with:
           version: $UV_VERSION
+
+      - name: Install dependencies
+        run: uv sync --all-groups
 
       - name: Build and install wheel
         run: |
