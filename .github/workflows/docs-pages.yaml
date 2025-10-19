@@ -28,14 +28,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          version: 2.2.0
+          # Install a specific version of uv.
+          version: "0.9.4"
 
       - name: Install docs deps
-        run: poetry install --no-interaction --with docs
+        run: uv sync --group docs
 
       - name: Build & deploy with MkDocs
         # --force overwrites existing site; --clean removes stale files
-        run: poetry run mkdocs gh-deploy --force --clean
+        run: uv run --group docs mkdocs gh-deploy --force --clean

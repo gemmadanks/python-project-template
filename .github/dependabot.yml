@@ -1,20 +1,16 @@
 version: 2
 updates:
-  # Keep Poetry dependencies up to date
-  - package-ecosystem: "pip"
+  # Keep uv dependencies up to date
+  - package-ecosystem: "uv"
     directory: "/"                    # where pyproject.toml lives
     schedule:
       interval: "daily"
     versioning-strategy: "increase"   # allow minor/patch bumps
-    groups:
-      poetry-dependencies:
-        patterns:
-          - "*"
     commit-message:
-      prefix: "chore(poetry)"
+      prefix: "chore(uv)"
     labels:
       - "dependencies"
-      - "poetry"
+      - "uv"
 
   # Keep GitHub Actions up to date
   - package-ecosystem: "github-actions"

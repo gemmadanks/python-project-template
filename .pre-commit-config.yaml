@@ -33,7 +33,7 @@ repos:
     rev: v2.3.0
     hooks:
       - id: codespell
-        args: ["--skip", "poetry.lock,dist,build,.venv,*.min.js"]
+        args: ["--skip", "uv.lock,dist,build,.venv,*.min.js"]
         exclude: |
           (?x)(
             ^docs/_build/|
@@ -52,7 +52,7 @@ repos:
     hooks:
       - id: pyright
         name: pyright (type check)
-        entry: poetry run pyright
+        entry: uv run pyright
         language: system
         pass_filenames: false
         stages: [pre-push]
@@ -62,7 +62,7 @@ repos:
     hooks:
       - id: mkdocs-build
         name: mkdocs build (check docs)
-        entry: poetry run mkdocs build --config-file mkdocs.yml --strict
+        entry: uv run --group docs mkdocs build --config-file mkdocs.yml --strict
         language: system
         pass_filenames: false
         stages: [pre-push]
@@ -73,17 +73,16 @@ repos:
     hooks:
       - id: pytest
         name: pytest (quick)
-        entry: poetry run pytest -q -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
+        entry: uv run pytest -q -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
         language: system
         types: [python]
         pass_filenames: false
         stages: [pre-push]
 
 
-# --- Poetry: manage dependencies and virtualenv ---
-  - repo: https://github.com/python-poetry/poetry
-    rev: 2.2.1
+# --- uv: check environment is in sync ---
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.9.4
     hooks:
-      - id: poetry-check
-      - id: poetry-lock
-      - id: poetry-install
+      - id: uv-lock
