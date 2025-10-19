@@ -8,6 +8,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # Set uv version
+  UV_VERSION: "0.9.4"
+
 jobs:
   pre-commit:
     name: Pre-commit hooks (lint/format/spell/type, all files)
@@ -25,8 +29,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
-          # Install a specific version of uv.
-          version: "0.9.4"
+          version: $UV_VERSION
 
       # Run the same hooks as locally; include push stage so pre-push hooks run too
       - name: Run pre-commit (all files, commit & push stages)
@@ -60,8 +63,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
-          # Install a specific version of uv.
-          version: "0.9.4"
+          version: $UV_VERSION
 
       - name: Run tests (full suite)
         run: uv run pytest --cov --cov-branch --cov-report=xml
@@ -86,8 +88,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
-          # Install a specific version of uv.
-          version: "0.9.4"
+          version: $UV_VERSION
 
       - name: Build HTML (fail on warnings)
         run: uv run --group docs mkdocs build --strict
@@ -115,8 +116,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
-          # Install a specific version of uv.
-          version: "0.9.4"
+          version: $UV_VERSION
 
       - name: Build and install wheel
         run: |
