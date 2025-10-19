@@ -15,7 +15,7 @@ Every software project needs a way to manage dependencies. This allows reproduci
 
 ## Problem Statement
 
-What dependencies manager is best for our project?
+What dependency manager is best for our project?
 
 ## Options Considered
 
