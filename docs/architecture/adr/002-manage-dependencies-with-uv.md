@@ -1,4 +1,4 @@
-# ADR-002: Use uv to manage project dependencies
+# ADR-002: Manage dependencies with uv
 | | |
 | ---| ---|
 | **Status** |  🟢 Accepted |
