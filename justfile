@@ -34,7 +34,7 @@ format:
 
 # Type checking (Pyright)
 type-check:
-    uvx pyright
+    uv run pyright
 
 # Run quick tests (exclude slow)
 test:
