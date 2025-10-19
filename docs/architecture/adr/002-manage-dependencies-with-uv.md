@@ -28,7 +28,7 @@ What dependencies manager is best for our project?
 | **mamba**       | Reimplementation of conda in C++. | ⚠️ | ✅ | ✅ |  ✅ | ✅ | ❌ | 23 | Fast but not PEP 621 compliant |
 | **conda**       | Binary package manager, widely used for scientific software. | ⚠️ | ⚠️ | ✅ |  ✅ | ✅ | ❌ | 21 | Not as fast and not PEP 621 compliant |
 | **pipenv**      | Simplified packaging management tool. | ⚠️ | ⚠️ | ✅  | ⚠️ | ✅ | ❌ | 20 | Not PEP 621 compliant. |
-| **pip + venv**  | Standard library tools. | ✅ | ⚠️  | ❌ | ✅   | ✅ | ⚠️ | 20 | Not suitable for complex environments
+| **pip + venv**  | Standard library tools. | ✅ | ⚠️  | ❌ | ✅   | ✅ | ⚠️ | 20 | Not suitable for complex environments |
  |
 | **spack**       | HPC-oriented packaging manager. Supports full stack. | ❌ | ⚠️ | ✅ | ⚠️ | ⚠️ | ❌ | 17 | Best for multi-language environments on HPC clusters. |
 
