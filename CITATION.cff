@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use python-project-template in your research, please cite it as below."
-title: "Python Project Template: For initialising a Python package."
-version: 0.6.0
-date-released: 2025-10-09
+message: If you use python-project-template in your research, please cite it as below.
+title: 'Python Project Template: For initialising a Python package.'
+version: 0.6.1
+date-released: 2025-10-09T00:00:00.000Z
 authors:
-  - family-names: "Danks"
-    given-names: "Gemma"
-repository-code: "https://github.com/gemmadanks/python-project-template"
-license: "BSD-3-Clause"
+  - family-names: Danks
+    given-names: Gemma
+repository-code: https://github.com/gemmadanks/python-project-template
+license: BSD-3-Clause
