@@ -40,7 +40,7 @@ We will use uv since it is extremely fast and likely to become the new standard.
 
 ## Consequences
 
-Using uv will simplify python and dependency management. It is extremely fast and so will speed up continuous integration, reducing waiting time substantially where installing dependencies is the bottleneck. It is also manages python versions and is PEP 621 compliant. This tool is likely to become the new standard.
+Using uv will simplify Python and dependency management. It is extremely fast and so will speed up continuous integration, reducing waiting time substantially where installing dependencies is the bottleneck. It also manages Python versions and is PEP 621 compliant. This tool is likely to become the new standard.
 
 A risk is that this is under active development and is not yet widely adopted. Alternatives to fall back on include Poetry or PDM. This ADR should be revisited in one year since development in this area is ongoing and adoption of particular tools is in a state of flux.
 
