@@ -26,11 +26,11 @@ lock:
 
 # Lint (Ruff check)
 lint:
-    uvx ruff check .
+    uv run ruff check .
 
 # Format (Ruff format)
 format:
-    uvx ruff format .
+    uv run ruff format .
 
 # Type checking (Pyright)
 type-check:
@@ -58,13 +58,13 @@ docs-serve:
 
 # Install pre-commit hooks
 pre-commit-install:
-    uvx pre-commit install \
-    && uvx pre-commit install -t pre-push \
-    && uvx pre-commit install --hook-type commit-msg
+    uv run pre-commit install \
+    && uv run pre-commit install -t pre-push \
+    && uv run pre-commit install --hook-type commit-msg
 
 # Run all pre-commit hooks
 pre-commit:
-    uvx pre-commit run --all-files --hook-stage push
+    uv run pre-commit run --all-files --hook-stage push
 
 # Clean generated artifacts
 clean:
