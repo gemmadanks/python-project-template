@@ -58,9 +58,14 @@
       ],
       "extra-files": [
         {
+          "jsonpath": "$.version",
           "path": "CITATION.cff",
-          "regex": "^version:\\s*(?<version>.*)$",
-          "type": "generic"
+          "type": "yaml"
+        },
+        {
+          "jsonpath": "$.package[?(@.name.value=='package-name')].version",
+          "path": "uv.lock",
+          "type": "toml"
         }
       ],
       "include-component-in-tag": false,

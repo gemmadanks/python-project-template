@@ -31,6 +31,7 @@ The goal is to help you start writing code immediately without having to spend t
         - [release-please-config.json](release-please-config.json)
         - [GitHub Actions workflow](.github/workflows/ci.yaml)
         - This README (including badge links)
+    1. Update the `"package-name"` field in [release-please-config.json](release-please-config.json) with your package name for automatically bumping the version number in [uv.lock](uv.lock) (see [release-please issue #2561](https://github.com/googleapis/release-please/issues/2561)).
     1. Customise this README with a description of your project and planned features.
 
 ## 🚀 Features
@@ -126,12 +127,12 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 │   └── unit/
 │       └── test_greet.py           # Example unit test (replace with real tests)
 ├── docs/                           # MkDocs content (Diátaxis layout)
-│   └── architecture                # Content on architectural decisions
-    │    └── adr                    # Architectural decision records
-    │        ├── NNN-*.md           # ADR files
-    │        ├── index.md           # Index of ADRs
-    │        └── template.md        # Template to use for new ADRs
-    ├── index.md
+│   ├── architecture                # Content on architectural decisions
+│   │   └── adr                    # Architectural decision records
+│   │        ├── NNN-*.md           # ADR files
+│   │        ├── index.md           # Index of ADRs
+│   │        └── template.md        # Template to use for new ADRs
+│   ├── index.md
 │   ├── reference.md                # Auto-generated via mkdocstrings
 │   ├── tutorials.md
 │   ├── explanation.md
@@ -143,13 +144,13 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 │   │   ├── ci.yaml                 # Lint / test / build
 │   │   └── release-please.yaml     # Automated releases
 │   ├── ISSUE_TEMPLATE/             # Issue forms
-|   |   ├── 01-bug.yml
+│   │   ├── 01-bug.yml
 │   │   └── 02-feature.yml
-|   ├── pull_request_template.md    # Pull request template
+│   ├── pull_request_template.md    # Pull request template
 │   └── dependabot.yml              # Dependency update automation
 ├── .pre-commit-config.yaml         # Pre-commit hook definitions
 ├── pyproject.toml                  # Project metadata + dependencies (uv)
-├── uv.lock                     # Locked dependency versions (uv)
+├── uv.lock                         # Locked dependency versions (uv)
 ├── README.md                       # Project overview (you are here)
 ├── mkdocs.yml                      # MkDocs configuration
 ├── CITATION.cff                    # Citation metadata
