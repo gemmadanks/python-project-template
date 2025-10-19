@@ -159,6 +159,7 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 ├── release-please-config.json      # Release-please configuration
 ├── .python-version                 # pyenv version pin
 ├── justfile                        # justfile containing recipes for common tasks
+├── .editorconfig                   # Ensures consistent code style across editors
 └── .gitignore
 ```
 
