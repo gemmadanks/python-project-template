@@ -40,7 +40,7 @@ omit = [
 ]
 
 [build-system]
-requires = ["uv-build"]
+requires = ["uv-build>=0.1,<1.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
