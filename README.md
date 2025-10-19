@@ -6,12 +6,12 @@
 [![Docs (GitHub Pages)](https://github.com/gemmadanks/python-project-template/actions/workflows/docs-pages.yaml/badge.svg)](https://github.com/gemmadanks/python-project-template/actions/workflows/docs-pages.yaml)
 [![Docs (RTD)](https://app.readthedocs.org/projects/python-project-template/badge/?version=latest)](https://gemmadanks-python-project-template.readthedocs.io/en/latest/)
 [![Dependabot](https://img.shields.io/github/issues-search?query=repo%3Agemmadanks%2Fpython-project-template%20is%3Apr%20author%3Aapp%2Fdependabot%20is%3Aopen&label=Dependabot%20PRs)](https://github.com/gemmadanks/python-project-template/issues?q=is%3Apr%20is%3Aopen%20author%3Aapp%2Fdependabot)
-[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A comprehensive, opinionated template for modern Python projects -- featuring Poetry packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates, architectural decision record (ADR) templates and automated semantic releases.
+A comprehensive, opinionated template for modern Python projects -- featuring uv packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, GitHub Actions CI, GitHub issue and pull request templates, architectural decision record (ADR) templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
@@ -37,7 +37,7 @@ The goal is to help you start writing code immediately without having to spend t
 
 - Python project directory structure
 - README template with badges
-- Packaging and dependency management via [Poetry](https://python-poetry.org/): [pyproject.toml](pyproject.toml)
+- Packaging and dependency management via [uv](https://docs.astral.sh/uv/): [pyproject.toml](pyproject.toml)
 - Linting and formatting via [Ruff](https://docs.astral.sh/ruff/): [.pre-commit-config.yaml](.pre-commit-config.yaml)
 - Testing framework using [pytest](https://docs.pytest.org/en/stable/)
 - CI using [GitHub Actions](https://docs.github.com/en/actions): [.github/workflows/ci.yaml](.github/workflows/ci.yaml)
@@ -57,11 +57,18 @@ The goal is to help you start writing code immediately without having to spend t
 
 ## 📦 Installation
 
+1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+2. Clone and install the project using uv:
 ```bash
 git clone https://github.com/gemmadanks/python-project-template
 cd python-project-template
-poetry install --with dev,docs
+uv sync
 ```
+3. Install pre-commit hooks (only needs to be done once)
+```bash
+just pre-commit-install
+```
+Hook definitions: [.pre-commit-config.yaml](.pre-commit-config.yaml)
 
 ## 🏁 Quickstart
 
@@ -76,30 +83,16 @@ Several common tasks have been added as recipes to a [justfile](justfile) in the
 [Installing just](https://just.systems/man/en/packages.html) allows you to run the following:
 
 ```bash
-just install               # poetry install
+just install               # uv sync
 just test                  # full test suite
 just lint                  # ruff check
 just format                # ruff format
+just type-check            # pyright type-check
 just docs-serve            # live docs
+just docs-build            # build docs
 just pre-commit            # run all pre-commit hooks
 just clean                 # remove generated files and folders
 ```
-
-## 🪝 Pre-commit / Pre-push
-
-Install hooks once:
-
-```bash
-just pre-commit-install           # installs default (commit-stage) hooks
-```
-
-Run on all files (CI equivalent):
-
-```bash
-just pre-commit
-```
-
-Hook definitions: [.pre-commit-config.yaml](.pre-commit-config.yaml)
 
 ## 📚 Documentation
 
@@ -154,8 +147,8 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 |   ├── pull_request_template.md    # Pull request template
 │   └── dependabot.yml              # Dependency update automation
 ├── .pre-commit-config.yaml         # Pre-commit hook definitions
-├── pyproject.toml                  # Project metadata + dependencies (Poetry)
-├── poetry.lock                     # Locked dependency versions (Poetry)
+├── pyproject.toml                  # Project metadata + dependencies (uv)
+├── uv.lock                     # Locked dependency versions (uv)
 ├── README.md                       # Project overview (you are here)
 ├── mkdocs.yml                      # MkDocs configuration
 ├── CITATION.cff                    # Citation metadata
@@ -186,16 +179,5 @@ If used in research, cite via [CITATION.cff](CITATION.cff).
 ## 🛡 License
 
 BSD-3-Clause – see [LICENSE](LICENSE).
-
-## ✅ Health Checklist
-
-| Area            | Command                               |
-|-----------------|----------------------------------------|
-| Lint            | `poetry run ruff check`               |
-| Format          | `poetry run ruff format`              |
-| Types (pre-push)| `poetry run pyright` (via hook)       |
-| Tests           | `poetry run pytest`                   |
-| Docs            | `poetry run mkdocs build --strict`    |
-
 
 Happy coding! 🚀
