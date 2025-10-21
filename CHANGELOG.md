@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/gemmadanks/python-project-template/compare/v0.6.1...v0.6.2) (2025-10-21)
+
+
+### 🐛 Bug Fixes
+
+* change directory structure ([#22](https://github.com/gemmadanks/python-project-template/issues/22)) ([ab077b8](https://github.com/gemmadanks/python-project-template/commit/ab077b8cf02b9f7328c8e2c2ed01c318d77d5d08))
+
 ## [0.6.1](https://github.com/gemmadanks/python-project-template/compare/v0.6.0...v0.6.1) (2025-10-19)
 
 
