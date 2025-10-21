@@ -33,7 +33,7 @@ docs = [
 
 
 [tool.coverage.run]
-source = ["package_name"]
+source = ["src/package_name"]
 omit = [
     "tests/*",
     "conftest.py"
@@ -45,4 +45,4 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-name = "package_name"
-module-root = ""
+module-root = "src"
