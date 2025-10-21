@@ -7,7 +7,7 @@ on:
       - "docs/**"
       - "mkdocs.yml"
       - ".github/workflows/docs-pages.yaml"
-      - "package_name/**"  # rebuild if API docs change
+      - "src/package_name/**"  # rebuild if API docs change
 
 permissions:
   contents: write  # needed to push to gh-pages
