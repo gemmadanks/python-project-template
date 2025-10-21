@@ -9,7 +9,7 @@ Please check each of the following before merging:
 - [ ] I will squash my commits and, where needed, edit the commit messages to make them more informative and follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) format
 - [ ] I have updated relevant documentation
 - [ ] I have linked to relevant issues
-- [ ] I have created an ADR (Architecturural Decision Record) for architecturally significant changes
+- [ ] I have created an ADR (Architectural Decision Record) for architecturally significant changes
 
 ### What is the purpose of this pull request?
 Check all that apply:
