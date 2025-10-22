@@ -1,22 +1,67 @@
 site_name: Python Project Template Documentation
+site_url: https://gemmadanks.github.io/python-project-template/
+repo_url: https://github.com/gemmadanks/python-project-template
+repo_name: python-project-template
 
 theme:
   name: "material"
+  palette:
+  # Palette toggle for light mode
+    - scheme: default
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: simple/rocket
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
 
 plugins:
-  - mkdocstrings
+  - mkdocstrings:
+      default_handler: python
+      locale: en
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true      # add this
+            show_root_full_path: true    # optional—gives full module path
+  - search
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gemmadanks
 
 nav:
   - Home: index.md
-  - Tutorials: tutorials.md
-  - How-to Guides: how-to.md
-  - Reference: reference.md
-  - Explanation: explanation.md
+  - Tutorials:
+      - Overview: tutorials/index.md
+  - How-To:
+      - Overview: how-to/index.md
+  - Reference: reference/index.md
+  - Explanation:
+      - Overview: explanation/index.md
   - Architecture:
-      - ADR Index: architecture/adr/index.md
-      - ADR-001: architecture/adr/001-use-architectural-decision-records.md
-      - ADR-002: architecture/adr/002-manage-dependencies-with-uv.md
-      - Template: architecture/adr/template.md
+      - Overview: architecture/index.md
+      - ADRs: architecture/adr/index.md
+  - Tags: tags.md
 
 extra_javascript:
     - javascript/readthedocs.js

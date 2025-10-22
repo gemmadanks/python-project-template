@@ -1,3 +1,9 @@
+---
+tags:
+  - docs
+---
+
+
 # ADR-0001: Use Architectural Decision Records
 | | |
 | ---| ---|
@@ -5,7 +11,6 @@
 | **Created**  | 2025-10-12 |
 | **Last Updated**  | 2025-10-12 |
 | **Deciders** | Gemma Danks |
-| **Tags** | docs |
 
 ---
 
