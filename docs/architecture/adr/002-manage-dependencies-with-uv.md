@@ -1,3 +1,8 @@
+---
+tags:
+  - packaging
+---
+
 # ADR-002: Manage dependencies with uv
 | | |
 | ---| ---|
@@ -5,7 +10,6 @@
 | **Created**  | 2025-10-18 |
 | **Last Updated**  | 2025-10-18 |
 | **Deciders** | Gemma Danks |
-| **Tags** | packaging |
 
 ---
 

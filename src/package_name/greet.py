@@ -6,10 +6,6 @@ Example:
     >>> from package_name.greet import say_hello
     >>> say_hello("Alice")
     'Hello, Alice!'
-
-The module contains the following functions:
-
-- `say_hello(name)` - Returns a greeting message for a given name.
 """
 
 
