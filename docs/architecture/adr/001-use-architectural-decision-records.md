@@ -4,7 +4,7 @@ tags:
 ---
 
 
-# ADR-0001: Use Architectural Decision Records
+# ADR-001: Use Architectural Decision Records
 | | |
 | ---| ---|
 | **Status** | 🟢 Accepted |
@@ -16,7 +16,7 @@ tags:
 
 ## Context
 
-Architectural decisions are design choices that have a significant impact on one or more architecture qualities (e.g. modifiability, maintainability, observability, testability, scalability, interoperability, extensibility, portability). These decisions shape both the current state of a project and its long-term trajectory. Over time, the rationale for these decisions can get lost if they are not written down. One certainty in software development is that there will at some point be a need, or a desire, to change and adapt to new technologies and best practices.
+Architectural decisions are design choices that have a significant impact on one or more architecture qualities (e.g. modifiability, maintainability, observability, testability, scalability, interoperability, extensibility, portability). These decisions shape both the current state of a project and its long-term trajectory. Over time, the rationale for these decisions can get lost if they are not written down. One certainty in software development is that there will at some point be a need, or a desire, to change and adapt to new requirements, technologies and best practices.
 
 Without knowing why a decision was made, there is a risk that future developers will not feel empowered to make changes. This will lead to the accumulation of technical debt when working around the current architecture in the short-term and, in the long-term, will make the project obsolete. Conversely, there may be a very good reason for sticking to the original decision but if future developers are not aware of this reason they may make changes that must later be reverted, wasting time and effort. Nygard refers to these two alternatives as "blind acceptance" and "blind reversal" in [a 2011 blog post on documenting architectural decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions), which we recommend reading for additional context.
 
