@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.3](https://github.com/gemmadanks/python-project-template/compare/v0.6.2...v0.6.3) (2025-10-25)
+
+
+### 🐛 Bug Fixes
+
+* edit ADR-001 ([#30](https://github.com/gemmadanks/python-project-template/issues/30)) ([6b8eacf](https://github.com/gemmadanks/python-project-template/commit/6b8eacfeb2b0dde122a589ff0a4036fdd84c66fe))
+
 ## [0.6.2](https://github.com/gemmadanks/python-project-template/compare/v0.6.1...v0.6.2) (2025-10-21)
 
 
