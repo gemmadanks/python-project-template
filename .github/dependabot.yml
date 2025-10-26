@@ -7,10 +7,9 @@ updates:
       interval: "daily"
     versioning-strategy: "increase"   # allow minor/patch bumps
     commit-message:
-      prefix: "deps(uv)"
+      prefix: "build(deps)"
     labels:
       - "dependencies"
-      - "uv"
 
   # Keep GitHub Actions up to date
   - package-ecosystem: "github-actions"
