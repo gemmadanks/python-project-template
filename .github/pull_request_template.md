@@ -14,8 +14,10 @@ Please check each of the following before merging:
 ### What is the purpose of this pull request?
 Check all that apply:
 - [ ] Documentation update
+- [ ] Changes to dependencies
 - [ ] Refactor
-- [ ] Improved test coverage
+- [ ] Improved tests
+- [ ] Improved CI
 - [ ] Bug fix
 - [ ] Changes to an existing feature
 - [ ] New feature
