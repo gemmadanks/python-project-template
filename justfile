@@ -59,6 +59,7 @@ docs-serve:
 # Install pre-commit hooks
 pre-commit-install:
     uv run pre-commit install \
+    && uv run pre-commit autoupdate --repo https://github.com/pre-commit/pre-commit-hooks \
     && uv run pre-commit install -t pre-push \
     && uv run pre-commit install --hook-type commit-msg
 
