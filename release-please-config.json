@@ -17,11 +17,6 @@
         },
         {
           "hidden": false,
-          "section": "📦 Dependencies",
-          "type": "deps"
-        },
-        {
-          "hidden": false,
           "section": "⚡ Performance",
           "type": "perf"
         },
@@ -41,8 +36,8 @@
           "type": "ci"
         },
         {
-          "hidden": true,
-          "section": "🔧 Build",
+          "hidden": false,
+          "section": "📦 Build",
           "type": "build"
         },
         {
