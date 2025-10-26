@@ -21,17 +21,17 @@
           "type": "perf"
         },
         {
-          "hidden": true,
+          "hidden": false,
           "section": "🧹 Refactoring",
           "type": "refactor"
         },
         {
-          "hidden": true,
+          "hidden": false,
           "section": "📚 Documentation",
           "type": "docs"
         },
         {
-          "hidden": true,
+          "hidden": false,
           "section": "🧩 CI",
           "type": "ci"
         },
@@ -46,7 +46,7 @@
           "type": "chore"
         },
         {
-          "hidden": true,
+          "hidden": false,
           "section": "🧪 Tests",
           "type": "test"
         }
