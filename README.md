@@ -54,7 +54,7 @@ The goal is to help you start writing code immediately without having to spend t
     - Template for [documenting architectural decisions](https://adr.github.io/): [docs/architecture/adr/template.md](docs/architecture/adr/template.md).
     - ADR to explain the rationale for using ADRs: [docs/architecture/adr/001-use-architectural-decision-records.md](docs/architecture/adr/001-use-architectural-decision-records.md).
 - Release automation via GitHub action from [release-please](https://github.com/googleapis/release-please): [.github/release-please-config.json](.github/release-please-config.json)
-- Citation metadata: [CITATION.cff](CITATION.cff)
+- Citation metadata, automatically updated for each new release: [CITATION.cff](CITATION.cff)
 - BSD-3-Clause: [LICENSE](LICENSE)
 - [EditorConfig](https://editorconfig.org/) configuration for consistent coding style across editors: [.editorconfig](.editorconfig)
 
