@@ -8,6 +8,10 @@ permissions:
   issues: write
   pull-requests: write
 
+concurrency:
+  group: release-please
+  cancel-in-progress: true
+
 name: release-please
 
 jobs:
