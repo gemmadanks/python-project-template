@@ -7,7 +7,7 @@ updates:
       interval: "daily"
     versioning-strategy: "increase"   # allow minor/patch bumps
     commit-message:
-      prefix: "chore(uv)"
+      prefix: "deps(uv)"
     labels:
       - "dependencies"
       - "uv"
