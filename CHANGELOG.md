@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.7.0](https://github.com/gemmadanks/python-project-template/compare/v0.6.3...v0.7.0) (2025-10-26)
+
+
+### 🚀 Features
+
+* automate updating CITATION.cff date-released ([#35](https://github.com/gemmadanks/python-project-template/issues/35)) ([ce6b33d](https://github.com/gemmadanks/python-project-template/commit/ce6b33d70ee88d90a5fb83440b9ab3990b939a9d))
+
+
+### 🐛 Bug Fixes
+
+* update CITATION.cff ([#36](https://github.com/gemmadanks/python-project-template/issues/36)) ([786a5c0](https://github.com/gemmadanks/python-project-template/commit/786a5c0919497a709666ba8636790f7ca3be3f46))
+
+
+### 📚 Documentation
+
+* customise CHANGELOG ([#32](https://github.com/gemmadanks/python-project-template/issues/32)) ([5f92a7f](https://github.com/gemmadanks/python-project-template/commit/5f92a7fdd2b9227758404f4dfebb157519b3a8de))
+
+
+### 🧩 CI
+
+* change concurrency ([#37](https://github.com/gemmadanks/python-project-template/issues/37)) ([b9d7f8d](https://github.com/gemmadanks/python-project-template/commit/b9d7f8da78040196b2b19089b5edfbf6f2024424))
+
+
+### 📦 Build
+
+* **deps:** Upgrade Python to 3.14 ([#34](https://github.com/gemmadanks/python-project-template/issues/34)) ([f223641](https://github.com/gemmadanks/python-project-template/commit/f223641aca23c9bb3b9905fe72e4f6edb4ee0f27))
+
 ## [0.6.3](https://github.com/gemmadanks/python-project-template/compare/v0.6.2...v0.6.3) (2025-10-25)
 
 
