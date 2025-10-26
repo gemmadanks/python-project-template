@@ -11,7 +11,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A comprehensive, opinionated template for modern Python projects -- featuring uv packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, .editorconfig, GitHub Actions CI, GitHub issue and pull request templates, architectural decision record (ADR) templates and automated semantic releases.
+A comprehensive, opinionated template for modern Python projects -- featuring uv packaging, Ruff for linting and formatting, justfile, pytest testing with code coverage upload to codecov, MkDocs documentation with configuration for Read The Docs, pre-commit hooks, .editorconfig, .devcontainer, GitHub Actions CI, GitHub issue and pull request templates, architectural decision record (ADR) templates and automated semantic releases.
 
 The goal is to help you start writing code immediately without having to spend time deciding what tools or conventions to use.
 
@@ -60,14 +60,25 @@ The goal is to help you start writing code immediately without having to spend t
 
 ## 📦 Installation
 
+### Working in a development container
+A [Dockerfile](./devcontainer/Dockerfile) and [configuration](./devcontainer/devcontainer.json) in [./devcontainer](./devcontainer) can be used in VSCode or GitHub Codespaces to work in a pre-configured development environment. It uses a Python 3.14 base image and installs uv, just and all Python dependencies.
+
+To open the project in the container VSCode, you will need to add the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and download [Docker](https://docs.docker.com/get-started/get-docker/) (or [Podman](https://podman.io/docs/installation) -- and [configure VSCode to use podman instead of Docker](https://code.visualstudio.com/remote/advancedcontainers/docker-options#_podman)) -- see the [VSCode tutorial on devcontainers](https://code.visualstudio.com/docs/devcontainers/tutorial) for more details on using devcontainers. Then run:
+``` bash
+Dev Containers: Reopen in Container
+```
+
+### Manual installation
+
 1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
-2. Clone and install the project using uv:
+1. Clone and install the project using uv:
 ```bash
 git clone https://github.com/gemmadanks/python-project-template
 cd python-project-template
 uv sync --all-groups
 ```
-3. Install pre-commit hooks (only needs to be done once)
+1. [Install just](https://just.systems/man/en/packages.html).
+1. Install pre-commit hooks (only needs to be done once)
 ```bash
 just pre-commit-install
 ```
@@ -82,8 +93,7 @@ print(say_hello("World"))
 
 ## 🧪 Common Tasks
 
-Several common tasks have been added as recipes to a [justfile](justfile) in the root of the repository.
-[Installing just](https://just.systems/man/en/packages.html) allows you to run the following:
+Several common tasks have been added as recipes to a [justfile](justfile) in the root of the repository:
 
 ```bash
 just install               # uv sync
@@ -158,6 +168,9 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 │   ├── pull_request_template.md   # Pull request template
 │   └── dependabot.yml             # Dependency update automation
 ├── .pre-commit-config.yaml        # Pre-commit hook definitions
+├── .devcontainer/                 # Dev container configuration
+│   ├── devcontainer.json
+│   └── Dockerfile
 ├── pyproject.toml                 # Project metadata + dependencies (uv)
 ├── uv.lock                        # Locked dependency versions (uv)
 ├── README.md                      # Project overview (you are here)
