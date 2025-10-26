@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.0](https://github.com/gemmadanks/python-project-template/compare/v0.7.0...v0.8.0) (2025-10-26)
+
+
+### 🚀 Features
+
+* add devcontainer ([#38](https://github.com/gemmadanks/python-project-template/issues/38)) ([ce42da4](https://github.com/gemmadanks/python-project-template/commit/ce42da450c844094098b587a21009e9c66be460b))
+
+
+### 🧩 CI
+
+* fix concurrency group ([#40](https://github.com/gemmadanks/python-project-template/issues/40)) ([de1fccd](https://github.com/gemmadanks/python-project-template/commit/de1fccd2ddfc0c1c3f5b454d02e173be9e948d28))
+
 ## [0.7.0](https://github.com/gemmadanks/python-project-template/compare/v0.6.3...v0.7.0) (2025-10-26)
 
 
