@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-citation-date
+  cancel-in-progress: true
+
 jobs:
   update-citation-date:
     if: startsWith(github.head_ref, 'release-please--branches--main')
