@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.1](https://github.com/gemmadanks/python-project-template/compare/v0.8.0...v0.8.1) (2025-11-01)
+
+
+### 🧩 CI
+
+* bump actions/checkout from 4 to 5 in the actions group ([#41](https://github.com/gemmadanks/python-project-template/issues/41)) ([47138a7](https://github.com/gemmadanks/python-project-template/commit/47138a71d6a70cc3c601509a85ac2a0d585ce8bb))
+
+
+### 📦 Build
+
+* **deps:** bump ruff from 0.14.2 to 0.14.3 ([#43](https://github.com/gemmadanks/python-project-template/issues/43)) ([7155195](https://github.com/gemmadanks/python-project-template/commit/7155195db76166844acd622c7d96a9ae328a81b3))
+
 ## [0.8.0](https://github.com/gemmadanks/python-project-template/compare/v0.7.0...v0.8.0) (2025-10-26)
 
 
