@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.2](https://github.com/gemmadanks/python-project-template/compare/v0.8.1...v0.8.2) (2025-11-06)
+
+
+### 📦 Build
+
+* **deps:** bump ipywidgets from 8.1.7 to 8.1.8 ([#45](https://github.com/gemmadanks/python-project-template/issues/45)) ([15f5e54](https://github.com/gemmadanks/python-project-template/commit/15f5e54452c53df607a4dd3c9e310e15e41138cd))
+* **deps:** bump mkdocs-material from 9.6.22 to 9.6.23 ([#44](https://github.com/gemmadanks/python-project-template/issues/44)) ([d1743dc](https://github.com/gemmadanks/python-project-template/commit/d1743dc3c09a09d485a1f723e1bb4fd2862798d4))
+* **deps:** bump plotly from 6.3.1 to 6.4.0 ([#46](https://github.com/gemmadanks/python-project-template/issues/46)) ([9f08708](https://github.com/gemmadanks/python-project-template/commit/9f0870844c02ac0d906ab5db54322c23d1f0d957))
+
 ## [0.8.1](https://github.com/gemmadanks/python-project-template/compare/v0.8.0...v0.8.1) (2025-11-01)
 
 
