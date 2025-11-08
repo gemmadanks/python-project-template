@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: If you use python-project-template in your research, please cite it as below.
 title: 'Python Project Template: For initialising a Python package.'
-version: 0.8.2
+version: 0.8.3
 date-released: '2025-10-26'
 authors:
   - family-names: Danks

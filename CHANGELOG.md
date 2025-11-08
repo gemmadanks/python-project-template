@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.3](https://github.com/gemmadanks/python-project-template/compare/v0.8.2...v0.8.3) (2025-11-07)
+
+
+### 📦 Build
+
+* **deps:** bump ruff from 0.14.3 to 0.14.4 ([#48](https://github.com/gemmadanks/python-project-template/issues/48)) ([5e04c3d](https://github.com/gemmadanks/python-project-template/commit/5e04c3d69e63bc6eed1806d5ff94e149c3e3215d))
+
 ## [0.8.2](https://github.com/gemmadanks/python-project-template/compare/v0.8.1...v0.8.2) (2025-11-06)
 
 
