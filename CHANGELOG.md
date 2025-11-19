@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.8.4](https://github.com/gemmadanks/python-project-template/compare/v0.8.3...v0.8.4) (2025-11-19)
+
+
+### 📦 Build
+
+* **deps:** bump mkdocs-material from 9.6.23 to 9.7.0 ([#51](https://github.com/gemmadanks/python-project-template/issues/51)) ([388bee3](https://github.com/gemmadanks/python-project-template/commit/388bee364ec8d1c90f0fe0fa04b5485c0c6b1ece))
+* **deps:** bump numpy from 2.3.4 to 2.3.5 ([#53](https://github.com/gemmadanks/python-project-template/issues/53)) ([f5e14fc](https://github.com/gemmadanks/python-project-template/commit/f5e14fc7a1143a15fe4e2d219e7c980374ddda31))
+* **deps:** bump plotly from 6.4.0 to 6.5.0 ([#52](https://github.com/gemmadanks/python-project-template/issues/52)) ([20835c7](https://github.com/gemmadanks/python-project-template/commit/20835c760407874a93531fbc3763bc1b895db76b))
+* **deps:** bump pre-commit from 4.3.0 to 4.4.0 ([#50](https://github.com/gemmadanks/python-project-template/issues/50)) ([09f37fd](https://github.com/gemmadanks/python-project-template/commit/09f37fd8948fce53acb07400f76b2bcffe75e669))
+* **deps:** bump ruff from 0.14.4 to 0.14.5 ([#54](https://github.com/gemmadanks/python-project-template/issues/54)) ([8619cb5](https://github.com/gemmadanks/python-project-template/commit/8619cb587ef8c8fc11c4fab44037290a31a976ef))
+
 ## [0.8.3](https://github.com/gemmadanks/python-project-template/compare/v0.8.2...v0.8.3) (2025-11-07)
 
 
