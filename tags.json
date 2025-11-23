@@ -1,0 +1,1 @@
+{"mappings": [{"item": {"url": "architecture/adr/001-use-architectural-decision-records/", "title": "ADR-001: Use Architectural Decision Records"}, "tags": ["docs"]}, {"item": {"url": "architecture/adr/002-manage-dependencies-with-uv/", "title": "ADR-002: Manage dependencies with uv"}, "tags": ["packaging"]}]}
