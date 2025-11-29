@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.8.5](https://github.com/gemmadanks/python-project-template/compare/v0.8.4...v0.8.5) (2025-11-29)
+
+
+### 🧩 CI
+
+* bump actions/checkout from 5 to 6 in the actions group ([#56](https://github.com/gemmadanks/python-project-template/issues/56)) ([605f1ce](https://github.com/gemmadanks/python-project-template/commit/605f1ce8756ae989e1343b7241c1366117165c44))
+
+
+### 📦 Build
+
+* **deps:** bump pre-commit from 4.4.0 to 4.5.0 ([#59](https://github.com/gemmadanks/python-project-template/issues/59)) ([27671ef](https://github.com/gemmadanks/python-project-template/commit/27671ef248d9e1775dd64bc530017bd1a8270864))
+* **deps:** bump pytest from 8.4.2 to 9.0.1 ([#60](https://github.com/gemmadanks/python-project-template/issues/60)) ([0ecca38](https://github.com/gemmadanks/python-project-template/commit/0ecca38d29b52596746f8dd55a4edb470d41c09c))
+* **deps:** bump ruff from 0.14.5 to 0.14.6 ([#57](https://github.com/gemmadanks/python-project-template/issues/57)) ([06d4d72](https://github.com/gemmadanks/python-project-template/commit/06d4d721de6476588add4dcc5e39b4c7d28f74ad))
+* **deps:** bump ruff from 0.14.6 to 0.14.7 ([#61](https://github.com/gemmadanks/python-project-template/issues/61)) ([710bb19](https://github.com/gemmadanks/python-project-template/commit/710bb194c487d97dcb14d974556dfaf688aecbb5))
+
 ## [0.8.4](https://github.com/gemmadanks/python-project-template/compare/v0.8.3...v0.8.4) (2025-11-19)
 
 
