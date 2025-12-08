@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.9.0](https://github.com/gemmadanks/python-project-template/compare/v0.8.5...v0.9.0) (2025-12-08)
+
+
+### 🚀 Features
+
+* add tests for notebooks ([#65](https://github.com/gemmadanks/python-project-template/issues/65)) ([201e982](https://github.com/gemmadanks/python-project-template/commit/201e982f252636f1652f32ba17668e2664824d9b))
+
+
+### 📚 Documentation
+
+* add note on location of configs ([#66](https://github.com/gemmadanks/python-project-template/issues/66)) ([82538d1](https://github.com/gemmadanks/python-project-template/commit/82538d1db9f33f839a0c73cd3978ad5e783f9ddf))
+
+
+### 📦 Build
+
+* **deps:** bump ruff from 0.14.7 to 0.14.8 ([#63](https://github.com/gemmadanks/python-project-template/issues/63)) ([b3e1f11](https://github.com/gemmadanks/python-project-template/commit/b3e1f11ee9f2ac2270aeeadc35164a2b2c4c9c14))
+
 ## [0.8.5](https://github.com/gemmadanks/python-project-template/compare/v0.8.4...v0.8.5) (2025-11-29)
 
 
