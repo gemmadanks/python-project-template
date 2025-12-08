@@ -186,6 +186,14 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 ├── .editorconfig                  # Ensures consistent code style across editors
 └── .gitignore
 ```
+Note that while it is common practice to keep the config files at the root of the
+repository, and this is what I recommend, it is possible to customise the
+location of some of them if you prefer
+(e.g. the path to `release-please-config.json` [can be specified in the
+release-please.yaml file for the GitHub action]
+(https://github.com/googleapis/release-please-action?tab=readme-ov-file#advanced-release-configuration)
+and the path to the `mkdocs.yaml` [can be specified](https://www.mkdocs.org/user-guide/configuration/)
+using the `--config-file` option and setting the path in the `.readthedocs.yaml` file.)
 
 ## 🤝 Contributing
 
