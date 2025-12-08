@@ -23,7 +23,7 @@ The goal is to help you start writing code immediately without having to spend t
     1.	Pick a name for your new project (for example, `my-awesome-package`).
     1.	Clone your new repo locally
 1. 🏡 Customise the repository
-    1. Rename your package directory `mv package_name my_package`
+    1. Rename your package directory `cd src; mv package_name my_package`
     1. Update [pyproject.toml](pyproject.toml) with your package name, author, and description.
     1. Update all references to package_name in:
         - [package_name/tests/](package_name/tests/)
@@ -98,6 +98,7 @@ Several common tasks have been added as recipes to a [justfile](justfile) in the
 ```bash
 just install               # uv sync
 just test                  # run quick (non-slow) tests
+just test-notebooks
 just lint                  # ruff check
 just format                # ruff format
 just type-check            # pyright type-check

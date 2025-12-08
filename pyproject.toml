@@ -13,7 +13,8 @@ dependencies = [
     "ipywidgets (>=8.1.7,<9.0.0)",
     "plotly (>=6.3.0,<7.0.0)",
     "numpy (>=2.3.3,<3.0.0)",
-    "matplotlib (>=3.10.6,<4.0.0)"
+    "matplotlib (>=3.10.6,<4.0.0)",
+    "nbmake>=1.5.5",
 ]
 
 [dependency-groups]

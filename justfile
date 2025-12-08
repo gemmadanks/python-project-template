@@ -44,6 +44,10 @@ test:
 test-vv:
     uv run pytest -vv -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
 
+# Test notebooks
+test-notebooks:
+    uv run pytest --nbmake notebooks/
+
 # Run full test suite with coverage
 coverage:
     uv run pytest --cov --cov-report=term-missing
@@ -74,3 +78,7 @@ clean:
 # Build distribution (wheel + sdist)
 build:
     uv build
+
+# Start Jupyter lab from inside a container
+jupyter-devcontainer:
+    uv run jupyter lab --allow-root --ip 0.0.0.0 --no-browser
