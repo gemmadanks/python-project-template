@@ -35,8 +35,8 @@ The goal is to help you start writing code immediately without having to spend t
     1. Customise this README with a description of your project and planned features.
     1. Customise the documentation configuration in [mkdocs.yml](mkdocs.yml) (see the [Material for MkDocs documentation](https://squidfunk.github.io/mkdocs-material/creating-your-site/#advanced-configuration) for details)
     1. Clear the CHANGELOG.
-    1. Enable automated releases by permitting GitHub actions to open PRs (Settings -> Actions -> Workflow permissions) and add an initial commit hash to bootstrap the release-please in [.release-please-manifest.json](.release-please-manifest.json).
-    1. Enable publishing to GitHub pages (Settings -> Pages) and/or add your project to RTD.
+    1. Enable automated releases by permitting GitHub Actions to open PRs (Settings -> Actions -> Workflow permissions) and add an initial commit hash to bootstrap the release-please in [.release-please-manifest.json](.release-please-manifest.json).
+    1. Enable publishing to GitHub Pages (Settings -> Pages) and/or add your project to RTD.
 
 
 ## 🚀 Features
