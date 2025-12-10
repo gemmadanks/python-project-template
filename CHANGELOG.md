@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.1](https://github.com/gemmadanks/python-project-template/compare/v0.9.0...v0.9.1) (2025-12-10)
+
+
+### 📚 Documentation
+
+* update README with additional setup instructions ([#69](https://github.com/gemmadanks/python-project-template/issues/69)) ([5e7961c](https://github.com/gemmadanks/python-project-template/commit/5e7961c83cc8ed17af0931a3c3ba0aa3dd105dac))
+
+
+### 📦 Build
+
+* **deps:** bump pytest from 9.0.1 to 9.0.2 ([#67](https://github.com/gemmadanks/python-project-template/issues/67)) ([d469f04](https://github.com/gemmadanks/python-project-template/commit/d469f047455fe64fd4a9f7d97f7c691e8476122b))
+
 ## [0.9.0](https://github.com/gemmadanks/python-project-template/compare/v0.8.5...v0.9.0) (2025-12-08)
 
 
