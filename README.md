@@ -34,6 +34,10 @@ The goal is to help you start writing code immediately without having to spend t
     1. Update the `"package-name"` field in [release-please-config.json](release-please-config.json) with your package name for automatically bumping the version number in [uv.lock](uv.lock) (see [release-please issue #2561](https://github.com/googleapis/release-please/issues/2561)).
     1. Customise this README with a description of your project and planned features.
     1. Customise the documentation configuration in [mkdocs.yml](mkdocs.yml) (see the [Material for MkDocs documentation](https://squidfunk.github.io/mkdocs-material/creating-your-site/#advanced-configuration) for details)
+    1. Clear the CHANGELOG.
+    1. Enable automated releases by permitting GitHub actions to open PRs (Settings -> Actions -> Workflow permissions) and add an initial commit hash to bootstrap the release-please in [.release-please-manifest.json](.release-please-manifest.json).
+    1. Enable publishing to GitHub pages (Settings -> Pages) and/or add your project to RTD.
+
 
 ## 🚀 Features
 
