@@ -99,7 +99,7 @@ jobs:
         run: uv run mkdocs build --strict
 
       - name: Upload built docs artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: docs-html
           path: site
