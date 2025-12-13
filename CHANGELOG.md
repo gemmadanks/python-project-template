@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.9.2](https://github.com/gemmadanks/python-project-template/compare/v0.9.1...v0.9.2) (2025-12-13)
+
+
+### 🧩 CI
+
+* bump actions/upload-artifact from 5 to 6 in the actions group ([#73](https://github.com/gemmadanks/python-project-template/issues/73)) ([30449ec](https://github.com/gemmadanks/python-project-template/commit/30449eca50d853d135404fec52f401231e12bc70))
+
+
+### 📦 Build
+
+* **deps:** bump matplotlib from 3.10.7 to 3.10.8 ([#70](https://github.com/gemmadanks/python-project-template/issues/70)) ([ff88ad3](https://github.com/gemmadanks/python-project-template/commit/ff88ad324b299e3d8b054b309674b808a4733029))
+* **deps:** bump ruff from 0.14.8 to 0.14.9 ([#72](https://github.com/gemmadanks/python-project-template/issues/72)) ([d58de1b](https://github.com/gemmadanks/python-project-template/commit/d58de1b40226762865d6ecf897c4604b838480dc))
+
 ## [0.9.1](https://github.com/gemmadanks/python-project-template/compare/v0.9.0...v0.9.1) (2025-12-10)
 
 
