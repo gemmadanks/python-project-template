@@ -70,6 +70,7 @@ def main() -> None:
         )
 
         environment = os.environ.copy()
+        environment.pop("PYTHONPATH", None)
         environment["PACKAGE_SMOKE_MODULE"] = module_name
         run(
             [
@@ -88,6 +89,7 @@ def main() -> None:
                 ),
             ],
             environment=environment,
+            cwd=temporary_path,
         )
 
 
