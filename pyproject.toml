@@ -19,7 +19,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "pytest>=8.4.2,<10.0.0",
+    "pytest>=9.1.1,<10.0.0",
     "ruff>=0.15.17,<0.16.0",
     "pre-commit (>=4.3.0,<5.0.0)",
     "pyright>=1.1.410,<2.0.0",
@@ -41,7 +41,7 @@ omit = [
 ]
 
 [build-system]
-requires = ["uv-build>=0.1,<1.0"]
+requires = ["uv-build>=0.11.29,<1.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
