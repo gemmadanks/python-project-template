@@ -16,6 +16,14 @@ default:
 install:
     uv sync
 
+# Install all dependencies (including dev + docs groups)
+install-all:
+    uv sync --all-groups   # include dev + docs groups (matches CI)
+
+# Install development dependencies (create/update virtualenv)
+install-dev:
+    uv sync --dev
+
 # Update dependencies to latest allowed versions
 update:
     uv lock --upgrade
@@ -32,6 +40,10 @@ lint:
 format:
     uv run ruff format .
 
+# Verify formatting without changing files
+format-check:
+    uv run ruff format --check .
+
 # Type checking (Pyright)
 type-check:
     uv run pyright
@@ -43,6 +55,9 @@ test:
 # Run tests with verbose output (exclude slow)
 test-vv:
     uv run pytest -vv -m "not slow" --doctest-modules --doctest-glob="*.py" --maxfail=1 --disable-warnings
+
+# Run the fast, non-mutating handoff checks
+check: format-check lint type-check test
 
 # Test notebooks
 test-notebooks:
@@ -78,6 +93,13 @@ clean:
 # Build distribution (wheel + sdist)
 build:
     uv build
+
+# Build, install, and import the package in a clean temporary environment
+package-smoke-test:
+    uv run --no-sync python scripts/package_smoke_test.py
+
+# Run the comprehensive local equivalent of CI (excluding its OS/Python matrix)
+ci: pre-commit coverage docs-build package-smoke-test
 
 # Start Jupyter lab from inside a container
 jupyter-devcontainer:
