@@ -28,6 +28,7 @@ The goal is to help you start writing code immediately without having to spend t
     1. Update all references to package_name in:
         - [tests/](tests/)
         - [docs/](docs/)
+        - [.github/workflows/](.github/workflows/)
         - [release-please-config.json](release-please-config.json)
         - [AGENTS.md](AGENTS.md)
         - This README (including badge links)
