@@ -51,7 +51,7 @@ def main() -> None:
             msg = f"expected one wheel in {distribution_dir}, found {len(wheels)}"
             raise RuntimeError(msg)
 
-        run(["uv", "venv", str(virtual_environment)])
+run(["uv", "venv", "--python", sys.executable, str(virtual_environment)])
 
         python_executable = virtual_environment / (
             "Scripts/python.exe" if os.name == "nt" else "bin/python"
