@@ -26,10 +26,10 @@ The goal is to help you start writing code immediately without having to spend t
     1. Rename your package directory `cd src; mv package_name my_package`
     1. Update [pyproject.toml](pyproject.toml) with your package name, author, and description.
     1. Update all references to package_name in:
-        - [package_name/tests/](package_name/tests/)
+        - [tests/](tests/)
         - [docs/](docs/)
         - [release-please-config.json](release-please-config.json)
-        - [GitHub Actions workflow](.github/workflows/ci.yaml)
+        - [AGENTS.md](AGENTS.md)
         - This README (including badge links)
     1. Update the `"package-name"` field in [release-please-config.json](release-please-config.json) with your package name for automatically bumping the version number in [uv.lock](uv.lock) (see [release-please issue #2561](https://github.com/googleapis/release-please/issues/2561)).
     1. Customise this README with a description of your project and planned features.
@@ -61,6 +61,7 @@ The goal is to help you start writing code immediately without having to spend t
 - Citation metadata, automatically updated for each new release: [CITATION.cff](CITATION.cff)
 - BSD-3-Clause: [LICENSE](LICENSE)
 - [EditorConfig](https://editorconfig.org/) configuration for consistent coding style across editors: [.editorconfig](.editorconfig)
+- Agent collaboration guidance, including repository instructions ([AGENTS.md](AGENTS.md)), tiered planning ([PLAN.md](PLAN.md)), and consistent review criteria ([CODE_REVIEW.md](CODE_REVIEW.md))
 
 ## 📦 Installation
 
@@ -105,12 +106,30 @@ just test                  # run quick (non-slow) tests
 just test-notebooks
 just lint                  # ruff check
 just format                # ruff format
+just format-check          # verify formatting without changing files
 just type-check            # pyright type-check
+just check                 # fast, non-mutating handoff checks
 just docs-serve            # live docs
 just docs-build            # build docs
+just package-smoke-test    # build, install, and import the package in isolation
+just ci                    # comprehensive local CI equivalent
 just pre-commit            # run all pre-commit hooks
 just clean                 # remove generated files and folders
 ```
+
+## 🤝 Working with coding agents
+
+- [AGENTS.md](AGENTS.md) gives coding agents durable, repository-specific
+  conventions and validation expectations.
+- [PLAN.md](PLAN.md) explains when to use a prompt, a quick plan, or a detailed
+  execution plan. Persisted plans are copied into [plans/](plans/), leaving the
+  reusable template unchanged.
+- [CODE_REVIEW.md](CODE_REVIEW.md) defines finding priorities, evidence
+  requirements, and the expected review output for humans and agents.
+
+For routine work, start with the goal, relevant context, constraints, and what
+must be true when the task is done. Reserve persisted plans and parallel agents
+for work whose ambiguity, risk, or duration justifies the extra coordination.
 
 ## 📚 Documentation
 
@@ -163,6 +182,10 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 │           └── 002-manage-dependencies-with-uv.md
 ├── notebooks/                     # Jupyter notebooks
 │   └── example.ipynb
+├── scripts/
+│   └── package_smoke_test.py      # Clean-wheel package smoke test
+├── plans/
+│   └── README.md                  # Location for task-specific work plans
 ├── .github/
 │   ├── workflows/
 │   │   ├── ci.yaml                # Lint / test / build
@@ -179,6 +202,9 @@ Managed by release-please: ([conventional commits](https://www.conventionalcommi
 ├── pyproject.toml                 # Project metadata + dependencies (uv)
 ├── uv.lock                        # Locked dependency versions (uv)
 ├── README.md                      # Project overview (you are here)
+├── AGENTS.md                      # Durable guidance for coding agents
+├── PLAN.md                        # Human-agent planning guide and templates
+├── CODE_REVIEW.md                 # Shared code-review rubric
 ├── mkdocs.yml                     # MkDocs configuration
 ├── CITATION.cff                   # Citation metadata
 ├── LICENSE                        # License

@@ -28,6 +28,12 @@ task explicitly asks to customize the template for a specific project.
   a second tool or parallel configuration.
 - Add or update tests when behavior changes. Update user-facing documentation
   when public APIs, setup steps, or workflows change.
+- Use the lightest planning level in `PLAN.md`: routine work needs no plan file,
+  while durable task plans are copied into `plans/`.
+- Use one writing agent by default. Delegate only independent, bounded work;
+  prefer parallel agents for read-heavy exploration, testing, or review. Give
+  parallel writers separate worktrees and non-overlapping ownership.
+- Review meaningful changes against `CODE_REVIEW.md` before handoff.
 - Record architecturally significant decisions with an ADR based on
   `docs/architecture/adr/template.md`.
 
@@ -48,9 +54,13 @@ just coverage         # full pytest run with terminal coverage
 just test-notebooks   # execute notebooks through nbmake
 just lint             # Ruff checks
 just format           # Ruff formatting
+just format-check     # verify formatting without changing files
 just type-check       # Pyright
+just check            # fast, non-mutating handoff checks
 just docs-build       # strict MkDocs build
 just build            # build wheel and source distribution
+just package-smoke-test # install and import the built wheel in isolation
+just ci               # comprehensive local CI equivalent
 just pre-commit       # all push-stage hooks
 ```
 
@@ -134,16 +144,15 @@ not installed, run the corresponding `uv run ...` command from the `justfile`.
 
 ## Validation before handoff
 
-Choose checks proportional to the change, but for a typical Python change run:
+Choose checks proportional to the change. For a typical Python change, run the
+non-mutating handoff suite:
 
 ```bash
-just format
-just lint
-just type-check
-just test
+just check
 ```
 
 Also run `just docs-build` for documentation or public API changes,
-`just test-notebooks` for notebook changes, and `just build` for packaging
-changes. Report which checks ran and clearly identify any check that could not
-be run.
+`just test-notebooks` for notebook changes, and `just package-smoke-test` for
+packaging changes. Use `just ci` before handing off a broad or high-risk change.
+Review the final diff using `CODE_REVIEW.md`, report which checks ran, and
+clearly identify any check that could not be run.

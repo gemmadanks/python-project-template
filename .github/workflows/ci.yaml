@@ -126,11 +126,5 @@ jobs:
       - name: Install dependencies
         run: uv sync --all-groups
 
-      - name: Build and install wheel
-        run: |
-          uv build
-          python -m venv pkgtest
-          source pkgtest/bin/activate
-          python -m pip install --upgrade pip
-          python -m pip install dist/*.whl
-          python -c "import package_name as m; print(getattr(m, '__version__', 'OK'))"
+      - name: Build, install, and import package
+        run: uv run --no-sync python scripts/package_smoke_test.py
