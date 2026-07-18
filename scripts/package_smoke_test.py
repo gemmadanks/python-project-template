@@ -52,13 +52,18 @@ def main() -> None:
             raise RuntimeError(msg)
 
         run(["uv", "venv", str(virtual_environment)])
+
+        python_executable = virtual_environment / (
+            "Scripts/python.exe" if os.name == "nt" else "bin/python"
+        )
+
         run(
             [
                 "uv",
                 "pip",
                 "install",
                 "--python",
-                str(virtual_environment),
+                str(python_executable),
                 str(wheels[0]),
             ]
         )
@@ -71,7 +76,7 @@ def main() -> None:
                 "run",
                 "--no-project",
                 "--python",
-                str(virtual_environment),
+                str(python_executable),
                 "python",
                 "-c",
                 (
