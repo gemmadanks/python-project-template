@@ -13,12 +13,17 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 
 
-def run(command: list[str], *, environment: dict[str, str] | None = None) -> None:
-    """Run a smoke-test command from the repository root."""
+def run(
+    command: list[str],
+    *,
+    environment: dict[str, str] | None = None,
+    cwd: Path | None = None,
+) -> None:
+    """Run a smoke-test command."""
     subprocess.run(
         command,
         check=True,
-        cwd=REPOSITORY_ROOT,
+        cwd=REPOSITORY_ROOT if cwd is None else cwd,
         env=environment,
     )
 
